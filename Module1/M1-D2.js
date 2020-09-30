@@ -50,37 +50,37 @@ Verify then, that name1 and name2 are equals if both lowercase (without changing
 // console.log(name1 == name2.toLowerCase());
 
 /* EXERCISE 6
-Create the variable X (value less than 10). Write the code to print the literal value of the given number (ex.: 1 => one, 5 => five)
+Create the variable X (value less than 10). Write the code to print the literal value of
+the given number (ex.: 1 => one, 5 => five)
 */
 
-/* WRITE YOUR CODE HERE */
-const x = 4;
+// const x = 4;
 
-if (x == 0) {
-    console.log("zero");
-} else if (x == 1) {
-    console.log("one");
-} else if (x == 2) {
-    console.log("two");
-} else if (x == 3) {
-    console.log("three");
-} else if (x == 4) {
-    console.log("four");
-} else if (x == 5) {
-    console.log("five");
-} else if (x == 6) {
-    console.log("six");
-} else if (x == 7) {
-    console.log("seven");
-} else if (x == 8) {
-    console.log("eigth");
-} else if (x == 9) {
-    console.log("nine");
-} else if (x == 10) {
-    console.log("ten");
-} else {
-    console.log("I can only print between 0 to 10");
-}
+// if (x == 0) {
+//     console.log("zero");
+// } else if (x == 1) {
+//     console.log("one");
+// } else if (x == 2) {
+//     console.log("two");
+// } else if (x == 3) {
+//     console.log("three");
+// } else if (x == 4) {
+//     console.log("four");
+// } else if (x == 5) {
+//     console.log("five");
+// } else if (x == 6) {
+//     console.log("six");
+// } else if (x == 7) {
+//     console.log("seven");
+// } else if (x == 8) {
+//     console.log("eigth");
+// } else if (x == 9) {
+//     console.log("nine");
+// } else if (x == 10) {
+//     console.log("ten");
+// } else {
+//     console.log("I can only print between 0 to 10");
+// }
 
 /* EXERCISE 7 (EXTRA)
 Insert a value in a variable based on the result of a ternary if
