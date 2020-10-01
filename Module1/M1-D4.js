@@ -26,6 +26,10 @@ const crazySum = function (num1, num2) {
     return result;
 };
 
+const crazySum2 = function (num1, num2) {
+    return num1 === num2 ? (num1 + num2) * 3 : num1 + num2;
+};
+
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the 
 absolute difference between a given number and 19. 
@@ -52,6 +56,13 @@ const boundary = function (n) {
     }
     return false;
 };
+
+function boundary2(n) {
+    if ((n > 20 && n <= 100) || n === 400) {
+        return true;
+    }
+    return false;
+}
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string S. Add to S "Strive" in front of a given string, if the given string begins with "Strive" then return the original string.   
@@ -107,13 +118,13 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 
 const giveMeRandom = function (n) {
     rand_nums = [];
-    for (let i = 0; i < 10; i++) {
-        rand_nums.push(Math.floor(Math.random() * Math.floor(n)));
+    for (let i = 0; i < n; i++) {
+        rand_nums.push(Math.floor(Math.random() * Math.floor(10)));
     }
     return rand_nums;
 };
 
-console.log(giveMeRandom(9));
+console.log(giveMeRandom(3));
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
 */
