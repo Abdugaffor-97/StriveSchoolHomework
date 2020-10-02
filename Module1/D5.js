@@ -324,8 +324,8 @@ function removeItemOnce(num, arr) {
 */
 
 function HalfTree(height) {
-    for (let i = 0; i < height; i++) {
-        console.log("*");
+    for (let i = 1; i <= height; i++) {
+        console.log("*".repeat(i));
     }
 }
 
@@ -337,6 +337,8 @@ function HalfTree(height) {
    *** 
   *****
 */
+
+
 
 /* Ex.23
   Create a function IsItPrime that receives a number and return true if the number is a prime number
