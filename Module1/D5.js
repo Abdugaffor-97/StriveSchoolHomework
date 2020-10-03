@@ -70,7 +70,10 @@ function Dice() {
 */
 
 function WhoIsBigger(num1, num2) {
-    return Math.max(num1, num2);
+    if (num1 !== num2) {
+        return Math.max(num1, num2);
+    }
+    return "Thay are equal";
 }
 
 /* Ex.3
@@ -105,7 +108,7 @@ function OnlyLetters(str) {
 }
 
 /* Ex.6 
-   Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
+    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
 
 function IsThisAnEmail(str) {
@@ -174,12 +177,31 @@ function WhatDayIsIt() {
     }
 */
 
+function RollTheDices(num) {
+    let values = [];
+    let total = 0;
+    for (let i = 0; i < num; i++) {
+        const diceRoll = Dice();
+        values.push(diceRoll);
+        total += diceRoll;
+    }
+    return {
+        total,
+        values,
+    };
+}
+
 /* Ex.9
-   Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
+    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
 */
 
+function HowManyDays(selected_date) {
+    const today = new Date();
+    return (today - selected_date) / (1000 * 3600 * 24);
+}
+
 /* Ex.10
-   Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
+    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
 
 function IsTodayMyBDay() {
@@ -198,7 +220,7 @@ function IsTodayMyBDay() {
 // NOTE: movies array is defined at the end of the file
 
 /* Ex.11
-   Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
+    Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
 */
 
 function DeleteProp(obj, str) {
@@ -242,8 +264,18 @@ function OnlyTitles(movies) {
 }
 
 /* Ex.15
-   Write the function OnlyThisMillennium that returns only the movies produced in this millennium
+    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
+
+function OnlyThisMillennium(movies) {
+    titles = [];
+    for (movie of movies) {
+        if (parseInt(movie.Year) >= 2000) {
+            titles.push(movie);
+        }
+    }
+    return titles;
+}
 
 /* Ex.16 
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
@@ -278,7 +310,7 @@ function SearchMovie(str, movies) {
     matchMovies = [];
     for (movie of movies) {
         if (movie.Title.includes(str)) {
-            matchMovies.push(movie.Title);
+            matchMovies.push(movie);
         }
     }
     return matchMovies;
@@ -338,7 +370,11 @@ function HalfTree(height) {
   *****
 */
 
-
+function Tree(height) {
+    for (let i = 1; i <= height; i++) {
+        console.log(" ".repeat(height - i) + "*".repeat(i * 2 - 1));
+    }
+}
 
 /* Ex.23
   Create a function IsItPrime that receives a number and return true if the number is a prime number
