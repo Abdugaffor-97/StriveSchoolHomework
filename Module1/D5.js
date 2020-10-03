@@ -392,6 +392,17 @@ function IsItPrime(number) {
     return true;
 }
 
+function IsItPrime2(number) {
+    if (number < 2) {
+        return false;
+    }
+    for (let i = 2; i < Math.floor(Math.sqrt(number)) + 1; i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    
+
 /* Movies array is an example array, used for the exs. Don't change it :)  */
 const movies = [
     {
