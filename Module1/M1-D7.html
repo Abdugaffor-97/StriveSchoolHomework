@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddd;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddd;
+        }
+
+        .products {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        window.onscroll = () => {
+            if (
+                window.innerHeight + window.scrollY >=
+                document.body.offsetHeight
+
+            ) {
+                document.querySelector("body").style.background = "lightgreen";
+
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#red').onclick = () => {
+                document.querySelector('h1').style.color = 'green'
+                console.log(document.querySelector('#red'))
+                console.log(document.querySelector('h1').innerText)
+            }
+
+            document.querySelector('#background-color').onclick = () => {
+                document.querySelector('body').style.background = 'rgb(172, 173, 173)'
+            }
+
+            document.querySelector('#submit').onclick = () => {
+                const email = document.querySelector('#email-store')
+                email.innerHTML = 'fake@mail.com'
+                email.href = 'mailto:fake@mail.com'
+
+                console.log(email.href)
+                console.log(email.innerHTML)
+            }
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <button id="red">Change Heading color to red</button>
+    <button id="background-color">Change Heading background color</button>
+
+    <br>
+    <input type="text" name="" id="title">
+    <button onclick="changeTitle()">Change Heading Title</button><br>
+
+
+    <h1 onmouseover="addClassToTitle()" onmouseleave="removeClassFromTitle()">Phone Store</h1>
+    <table>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Batery Life</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>iPhone10</td>
+            <td>1000$</td>
+            <td>4000 mah</td>
+        </tr>
+        <tr>
+            <td>Samsung</td>
+            <td>Galaxi 10</td>
+            <td>10001$</td>
+            <td>4000 mah</td>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>Huawei</td>
+            <td>1000$</td>
+            <td>4000 mah</td>
+        </tr>
+        <tr>
+            <td>BlackBerry</td>
+            <td>Evolve X</td>
+            <td>1000$</td>
+            <td>4000 mah</td>
+        </tr>
+        <tr>
+            <td>Lg</td>
+            <td>G3</td>
+            <td>1000$</td>
+            <td>4000 mah</td>
+        </tr>
+    </table>
+
+    <div class="products">
+        <div class="product">
+            <img src="images/apple.jpeg" alt="image of apple10">
+            <h3>iPhone 10</h3>
+            <ul>
+                <li>Processor : Lorem, ipsum dolor.</li>
+                <li>RAM : 8GB.</li>
+                <li>Storage : 128 BG.</li>
+                <li>Display : 6 inch.</li>
+                <li>Camera : 20 MP.</li>
+                <li>Battery : 400 mAh.</li>
+                <a href="#">Amazon link</a>
+            </ul>
+            <h4>Price: 1000$</h4>
+        </div>
+        <div class="product">
+            <img src="images/samsung.jpeg" alt="image of samsung">
+            <h3>Samsung Galaxi10</h3>
+            <ul>
+                <li>Processor : Lorem, ipsum dolor.</li>
+                <li>RAM : 8GB.</li>
+                <li>Storage : 128 BG.</li>
+                <li>Display : 6 inch.</li>
+                <li>Camera : 20 MP.</li>
+                <li>Battery : 400 mAh.</li>
+                <a href="#">Amazon link</a>
+
+            </ul>
+            <h4>Price: 1000$</h4>
+        </div>
+        <div class="product">
+            <img src="images/motorolla.jpeg" alt="image of motorolla">
+            <h3>Motorolla Edge</h3>
+            <ul>
+                <li>Processor : Lorem, ipsum dolor.</li>
+                <li>RAM : 8GB.</li>
+                <li>Storage : 128 BG.</li>
+                <li>Display : 6 inch.</li>
+                <li>Camera : 20 MP.</li>
+                <li>Battery : 400 mAh.</li>
+                <a href="#">Amazon link</a>
+
+            </ul>
+            <h4>Price: 1000$</h4>
+        </div>
+        <div class="product">
+            <img src="images/blackberry-exolve-x-5.jpg" alt="image of exolve">
+            <h3>Exolve X</h3>
+            <ul>
+                <li>Processor : Lorem, ipsum dolor.</li>
+                <li>RAM : 8GB.</li>
+                <li>Storage : 128 BG.</li>
+                <li>Display : 6 inch.</li>
+                <li>Camera : 20 MP.</li>
+                <li>Battery : 400 mAh.</li>
+                <a href="#">Amazon link</a>
+
+            </ul>
+            <h4>Price: 1000$</h4>
+        </div>
+        <div class="product">
+            <img src="images/apple.jpeg" alt="image of apple10">
+            <h3>iPhone 10</h3>
+            <ul>
+                <li>Processor : Lorem, ipsum dolor.</li>
+                <li>RAM : 8GB.</li>
+                <li>Storage : 128 BG.</li>
+                <li>Display : 6 inch.</li>
+                <li>Camera : 20 MP.</li>
+                <li>Battery : 400 mAh.</li>
+                <a href="#">Amazon link</a>
+
+            </ul>
+            <h4>Price: 1000$</h4>
+        </div>
+        <div class="product">
+            <img src="images/lg.jpg" alt="image of LG">
+            <h3>LG G3</h3>
+            <ul>
+                <li>Processor : Lorem, ipsum dolor.</li>
+                <li>RAM : 8GB.</li>
+                <li>Storage : 128 BG.</li>
+                <li>Display : 6 inch.</li>
+                <li>Camera : 20 MP.</li>
+                <li>Battery : 400 mAh.</li>
+                <a href="#">Amazon link</a>
+
+            </ul>
+            <h4>Price: 1000$</h4>
+        </div>
+    </div>
+    <div id="googleMap" style="width:100%;height:400px;">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.9293701854194!2d-0.11182894881637555!3d51.532855279539376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b43b163611f%3A0xb65e0ea660e7bd60!2s70%20White%20Lion%20St%2C%20The%20Angel%2C%20London%20N1%209PP!5e0!3m2!1sen!2suk!4v1601904512727!5m2!1sen!2suk"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+
+    </div>
+
+    <footer>
+        <p>buy.gazelle.com</p>
+        <a id="email-store" href="mailto:buy.gazelle@.com">buy.gazelle@.com</a>
+    </footer>
+
+
+    <textarea>Message...</textarea>
+    <form action="">
+        <label for="fname">First Name:</label><br>
+        <input type="text" placeholder="John"><br>
+
+        <label for="lnamme">Last Name:</label> <br>
+        <input type="text" placeholder="Doe"><br><br>
+        <input type="button" value="Submit" id="submit">
+    </form>
+    </div>
+    <button id="snippet">Add snippet</button>
+</body>
+<!-- Starting from D6's exercise, use your Smartphone Shop Website and implement the following exercises-->
+<script>
+    /*EXERCISE 1 
+    Create a new welcome alert message when the page successfully loads
+      */
+    window.onload = function () {
+        alert('Welcome!')
+    };
+    /* EXERCISE 2
+        Write a function to change the Title of the page in something else (execute the function in browser console)
+    */
+
+    const changeTitle = function () {
+        const newTitle = document.querySelector('#title').value
+        document.querySelector('h1').innerText = newTitle
+        console.log(document.querySelector('h1'))
+        document.querySelector('#title').value = ''
+    };
+    /* EXERCISE 3a
+        Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
+    */
+    const addClassToTitle = function () {
+        let h1 = document.querySelector('h1')
+        document.querySelector('h1').style.color = 'red'
+    }
+
+
+    /* EXERCISE 3b
+        Write a function to remove "red-color" class from previous h1 (execute the function when the mouse leaves the title).
+    */
+    const removeClassFromTitle = function () {
+        document.querySelector('h1').style.color = 'black'
+    };
+    /* EXERCISE 4
+        Add the following html snippet to your page:
+            <h2 id="listTitle">Todo List</h2>
+            <ul id="firstList">
+                <li><p>1st</p></li>
+                <li>2nd</li>
+                <li>3rd</li>
+            </ul>
+            <ul id="secondList">
+                <li>1st</li>
+                <li>2nd</li>
+                <li>3rd</li>
+            </ul>
+            <div>
+                <p>This text is just for the exercise</p>
+            </div>
+        
+    Write a function to change the text of only the p which are child of a div (execute the function by assigning it to a button's click event)
+    */
+    document.querySelector('#snippet').onclick = () => {
+        console.log('selected')
+        let h2 = document.createElement('h1')
+        h2.classList.add('listTitle')
+        h2.innerText = 'Todo List'
+        document.querySelector('body').appendChild(h2) //done! append elemant end of body
+
+        const ul = document.createElement('ul')
+        ul.id = 'listTitle'
+
+    }
+    /* EXERCISE 5
+        Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
+    */
+    const changeListTitle = function (content) { };
+
+
+    /* EXERCISE 6
+        Write a function to add a new item ONLY to the second list (create an input field + add button)
+    */
+    const addToTheSecond = function (content) { };
+    /* EXERCISE 7
+        Write a function to make the first UL disappear (button)
+    */
+    const firstUlDisappear = function () { };
+    /* EXERCISE 8
+        Write a function to make the background of every UL green (button)
+    */
+    const paintItGreen = function () { };
+
+    /* EXERCISE 9
+        Add a "magnifier function" to the table.
+        When the user mouse goes on a table cell (not the image one) the font size must increase.
+        HINT use mouseenter / mouseleave events
+    */
+    const makeThemMagnifiable = function () { };
+    /* EXERCISE 10
+        Add a button to toggle all the product images (toggle => if visible, hide, if not visible, show)
+    */
+    const toggleShowImages = function () { };
+
+    //##### EXTRA
+
+    /* EXERCISE 11
+        Make the heading of the page change color radomly every time the user clicks on it
+        */
+    const makeItClickable = function () { };
+
+    /*EXERCISE 12
+    Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
+  */
+</script>
+
+</html>
