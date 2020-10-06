@@ -22,6 +22,10 @@
         tr:nth-child(even) {
             background-color: #dddd;
         }
+
+        .products {
+            text-align: center;
+        }
     </style>
 
     <script>
@@ -33,19 +37,39 @@
             ) {
                 document.querySelector("body").style.background = "lightgreen";
 
-            } else {
-                document.querySelector("body").style.background = "white";
             }
         };
 
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#red').onclick = () => {
+                document.querySelector('h1').style.color = 'red'
+                console.log(document.querySelector('#red'))
+                console.log(document.querySelector('h1').innerText)
+            }
 
-        document.querySelector('button').onclick = () => {
-            document.querySelector('#email-store').innerHTML = 'FakeEmal'
-        }
+            document.querySelector('#background-color').onclick = () => {
+                document.querySelector('body').style.background = 'rgb(61, 71, 63)'
+            }
+
+            document.querySelector('#submit').onclick = () => {
+                const email = document.querySelector('#email-store')
+                email.innerHTML = 'fake@mail.com'
+                email.href = 'mailto:fake@mail.com'
+
+                console.log(email.href)
+                console.log(email.innerHTML)
+            }
+
+        })
+
+
+
     </script>
 </head>
 
 <body>
+    <button id="red">Change Heading color to red</button>
+    <button id="background-color">Change Heading background color</button>
     <h1>gazelle </h1>
     <table>
         <tr>
@@ -88,7 +112,7 @@
 
     <div class="products">
         <div class="product">
-            <img src="/images/apple.jpeg" alt="image of apple10">
+            <img src="images/apple.jpeg" alt="image of apple10">
             <h3>iPhone 10</h3>
             <ul>
                 <li>Processor : Lorem, ipsum dolor.</li>
@@ -102,7 +126,7 @@
             <h4>Price: 1000$</h4>
         </div>
         <div class="product">
-            <img src="/images/samsung.jpeg" alt="image of samsung">
+            <img src="images/samsung.jpeg" alt="image of samsung">
             <h3>Samsung Galaxi10</h3>
             <ul>
                 <li>Processor : Lorem, ipsum dolor.</li>
@@ -117,7 +141,7 @@
             <h4>Price: 1000$</h4>
         </div>
         <div class="product">
-            <img src="/images/motorolla.jpeg" alt="image of motorolla">
+            <img src="images/motorolla.jpeg" alt="image of motorolla">
             <h3>Motorolla Edge</h3>
             <ul>
                 <li>Processor : Lorem, ipsum dolor.</li>
@@ -132,7 +156,7 @@
             <h4>Price: 1000$</h4>
         </div>
         <div class="product">
-            <img src="/images/blackberry-exolve-x-5.jpg" alt="image of exolve">
+            <img src="images/blackberry-exolve-x-5.jpg" alt="image of exolve">
             <h3>Exolve X</h3>
             <ul>
                 <li>Processor : Lorem, ipsum dolor.</li>
@@ -147,7 +171,7 @@
             <h4>Price: 1000$</h4>
         </div>
         <div class="product">
-            <img src="/images/apple.jpeg" alt="image of apple10">
+            <img src="images/apple.jpeg" alt="image of apple10">
             <h3>iPhone 10</h3>
             <ul>
                 <li>Processor : Lorem, ipsum dolor.</li>
@@ -162,7 +186,7 @@
             <h4>Price: 1000$</h4>
         </div>
         <div class="product">
-            <img src="/images/lg.jpg" alt="image of LG">
+            <img src="images/lg.jpg" alt="image of LG">
             <h3>LG G3</h3>
             <ul>
                 <li>Processor : Lorem, ipsum dolor.</li>
@@ -193,24 +217,16 @@
 
 
     <textarea>Message...</textarea>
+    <form action="">
+        <label for="fname">First Name:</label><br>
+        <input type="text" placeholder="John"><br>
 
-    <form action="" id="usrform">
-        <label for="name">Name</label>
-        <input id="name" type="text" />
-        <label for="surname">Surname</label>
-        <input id="surname" type="text" />
-        <label for="email">Email</label>
-        <input id="email" type="email" />
-
-        <button>Submit</button>
+        <label for="lnamme">Last Name:</label> <br>
+        <input type="text" placeholder="Doe"><br><br>
+        <input type="button" value="Submit" id="submit">
     </form>
-
     </div>
-
-    <br><br>
-
 </body>
-
 
 </html>
 
