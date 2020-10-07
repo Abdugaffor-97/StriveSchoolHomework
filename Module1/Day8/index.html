@@ -10,6 +10,7 @@ You are building a task list site.
 The have a list of tasks and can, at any time, add a new one, delete one or sort the whole bunch of them
 -->
 <html lang="en">
+
 <head>
     <!-- EXERCISE 1:
     Specify the title, the charset (UTF-8) and the viewport of the page.
@@ -17,28 +18,28 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Task List</title>
 
     <style>
-    /* EXERCISE 2:  
+        /* EXERCISE 2:  
     Create a CSS class for the task list with a diverse background
     Create a CSS class for the task list item with a border, a bold text and a bigger font size
     Style every button of the page to be bigger
     */
     </style>
 </head>
+
 <body>
     <h1>Welcome to your personal Task List!</h1>
     <br />
 
-    <span
-    >You can add any task you like by writing it in the specified field and
-    then press "Add new task"
-    </span
-    ><br/><br />
+    <span>You can add any task you like by writing it in the specified field and
+        then press "Add new task"
+    </span><br /><br />
 
     <input type="text" id="newTask" />
-    <input type="button" value="Add new Task" onclick="addNewTask()"/>
+    <input type="button" value="Add new Task" onclick="addNewTask()" />
 
     <br><br>
     <button onclick="removeFirst()">Remove First</button>
@@ -49,21 +50,19 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
 
 
-    
+
 
     <ul id="myTaskList"></ul>
 
     <hr />
 
     <input type="color" placeholder="Color" id="colorPicker" />
-    <input
-    type="button"
-    value="Change task background"
-    onclick="changeTaskBackgroundColor()"/>
+    <input type="button" value="Change task background" onclick="changeTaskBackgroundColor()" />
 
     <hr />
 
     <input type="button" value="Sort" onclick="bubblesort()" />
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
