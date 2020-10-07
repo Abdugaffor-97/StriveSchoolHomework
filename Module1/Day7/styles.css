@@ -1,0 +1,22 @@
+header nav ul {
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(38, 38, 38);
+    cursor: pointer;
+}
+
+.red-color {
+    color: red;
+}
+
+aside {
+    font-size: medium;
+}
+
+.magnifier {
+    font-size: xx-large;
+}
