@@ -33,9 +33,5 @@ window.onload = function () {
         randNum = randNumGenerator();
         const td = document.querySelector(`#square${randNum}`);
         td.style.backgroundColor = "green";
-
-        randNums = [].push(random)
-        randNums.
-
     };
 };
