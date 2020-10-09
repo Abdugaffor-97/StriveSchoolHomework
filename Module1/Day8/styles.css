@@ -13,11 +13,13 @@ input {
     background-color: #4caf50;
     color: white;
     padding: 15px 30px;
+    border-radius: 3px;
 }
 
 body {
     text-align: center;
     text-decoration: none;
+    height: 100vh;
 }
 
 #newTask {

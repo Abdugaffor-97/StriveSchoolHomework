@@ -3,8 +3,10 @@ window.onload = function () {
     const bingoTable = document.getElementById("bingoTable");
 
     let nums = []; // To store 'td' elements
+    let randomNumbers = []; // To store randon numbers then I use it for pick num inside this array
 
     for (let i = 1; i <= bingoCells; i++) {
+        randomNumbers.push(i);
         const td = document.createElement("td");
         td.id = `square${i}`;
         const h4 = document.createElement("h4");
@@ -24,14 +26,23 @@ window.onload = function () {
         }
     }
 
-    const randNumGenerator = function () {
-        return Math.floor(Math.random() * 77);
+    const removeItem = function (array, value) {
+        const index = array.indexOf(value);
+        if (index > -1) {
+            array.splice(index, 1);
+        }
+        return array;
     };
 
-    const randButton = document.querySelector("#randButton");
+    const randButton = document.getElementById("randButton");
     randButton.onclick = function () {
-        randNum = randNumGenerator();
-        const td = document.querySelector(`#square${randNum}`);
-        td.style.backgroundColor = "green";
+        const randomNum = Math.floor(Math.random() * randomNumbers.length + 1);
+        randomNumbers = removeItem(randomNumbers, randomNum);
+
+        console.log(randomNum);
+        console.log(randomNumbers);
+
+        const td = document.getElementById(`square${randomNum}`);
+        td.style.background = "green";
     };
 };
