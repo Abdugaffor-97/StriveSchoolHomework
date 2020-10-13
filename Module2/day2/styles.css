@@ -1,0 +1,31 @@
+section {
+    margin: 50px 100px;
+}
+
+img {
+    width: 100%;
+    margin-top: 20px;
+    height: 250px;
+}
+
+a,
+h4,
+p {
+    margin-bottom: 0;
+    line-height: normal;
+}
+
+section img {
+    width: auto;
+    float: left;
+}
+
+section p {
+    margin-bottom: 200px;
+    margin-left: 30px;
+    padding-left: 250px;
+}
+
+section h4 {
+    text-align: center;
+}

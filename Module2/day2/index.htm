@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day.
+- You can ask for tutor's help.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>My Favaurite Quran Reciter</title>
+
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+    </style>
+</head>
+
+<body>
+    <!-- EXERCISE 2 
+Implement a navigation bar using the bootstrap component
+This navigation bar must be linked to every section in your page
+-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/mishari.jpeg" alt="image of mishari rashid al alafasi">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>Mishari Rashid Al-Alafasi</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/ossi.jpeg" alt="image of aburrohman al ossi">
+                <a href="#">
+                    <h4>Ramadan 2019</h4>
+                </a>
+                <p>Abdurrohman Al-Ossi</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/kurdi.jpeg" alt="image of mishari rashid al alafasi">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>Raad Mohammad al Kurdi</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/saudas.jpeg" alt="image of Abdul Rahman Al Sudais">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>Abdul Rahman Al Sudais</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/mishari.jpeg" alt="image of mishari rashid al alafasi">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>Mishari Rashid Al-Alafasi</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/hisham.jpeg" alt="image of mishari rashid al alafasi">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>Omar Al-Hisham</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/niazi.jpg" alt="image of mishari rashid al alafasi">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>fahad Aziz Niazi</p>
+                <small>Duration: 10 hours</small>
+            </div>
+            <div class="col col-6 col-md-4 col-lg-3">
+                <img src="images/niazi.jpg" alt="image of mishari rashid al alafasi">
+                <a href="#">
+                    <h4>Ramadan 2016</h4>
+                </a>
+                <p>fahad Aziz Niazi</p>
+                <small>Duration: 10 hours</small>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- EXERCISE 3
+Create a responsive section for your favourite albums.
+In this section you should have:
+- 4 albums per row when the screen is very large
+- 3 albums per row when you are on a tablet (or a smaller window)
+- 2 albums per row when you are on a small screen
+-->
+
+
+
+    <!-- EXERCISE 4
+Create a section for the album review.
+Pick one of your fav albums, and create a section with:
+- Cover
+- Title
+- Band
+- Lenght
+- Genre
+- Tracklist
+- ... And whatever you think it's interesting about it!
+-->
+    <section>
+        <h2>About section</h2>
+        <img src="images/mishari.jpeg" alt="image of Abdurrohman al-ossi">
+        <h4>Ramadan 2019</h4>
+        <p>
+            Duration 12 hours
+            Mishary bin Rashid Alafasy (Arabic: مشاري بن راشد العفاسي‎), born in Kuwait, is a Quran reciter, imam,
+            preacher, and
+            Nasheed artist.[1][2][3] He studied in the Islamic University of Madinah's College of Qur'an, specializing
+            in the ten
+            qira'at and tafsir
+        </p>
+        <div class="container">
+            <ol class="row">
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+                <li class="col col-2">Al Fatihah</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- EXERCISE 5
+Worst album list! Find out the music you don't really like or you find overrated and list it
+in this "hall of shame" chart!
+-->
+
+    <!-- EXERCISE 6
+Do you have any musician / band you admire or you are fan of?
+This section is dedicated to him / her / them!
+Feel free to experiment in this part of the page.
+-->
+
+    <section>
+        <h4>My favourite quran reciter</h4>
+        <p>Mishary bin Rashid Alafasy (Arabic: مشاري بن راشد العفاسي‎), born in Kuwait, is a Quran reciter, imam,
+            preacher, and
+            Nasheed artist.[1][2][3] He studied in the Islamic University of Madinah's College of Qur'an, specializing
+            in the ten
+            qira'at and tafsir.[4]
+            On 25 October 2008, Alafasy was awarded the first Arab Creativity Oscar by the Arab Creativity Union in
+            Egypt. The event
+            was sponsored by the Secretary-General of the Arab League, Amr Moussa as a recognition of Alafasy’s role in
+            promoting
+            Islamic principles and teachings.[5]
+
+            Alafasy was voted by readers to be the Best Qur'an Reciter in the 2012 About.com Readers' Choice Awards.[6]
+        </p>
+    </section>
+
+    <!-- EXERCISE 7
+Just covers!
+Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+-->
+
+    <!-- EXERCISE 8
+Implement a footer with some information / social links
+-->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">Facebook</i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">Twitter</i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">Instagram</i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x">Pinterest</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- EXTRA:
+EXERCISE 9
+Create album details that are going to be toggled on and off by clicking on the album image
+-->
+
+    <!-- EXERCISE 10
+Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+-->
+
+    <!--
+EXERCISE 11
+Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
