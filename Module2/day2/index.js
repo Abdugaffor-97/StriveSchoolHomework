@@ -101,5 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
         `);
     });
     row.innerHTML = output.join("");
-    console.log(reviewAlbum);
 });
