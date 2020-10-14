@@ -29,3 +29,7 @@ section p {
 section h4 {
     text-align: center;
 }
+
+#display-none {
+    display: none;
+}
