@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let teams = [];
     teamBtn.addEventListener("click", function () {
         teamsContainer = document.querySelector(".teams");
-        teamsContainer.innerHTML += `<div id="${countTeam}" class="team col col-6 col-lg-3">${teamName.value}</div>`;
+        teamsContainer.innerHTML += `<div id="${countTeam}" class="team col-6 col-lg-3">${teamName.value}</div>`;
         countTeam += 1;
         teamName.value = "";
         teams.push(teamName.value);
@@ -45,12 +45,19 @@ document.addEventListener("DOMContentLoaded", () => {
         players = shuffleArray(players);
 
         let i = 0;
-        while (i !== players.length) {
-            console.log(players[i]);
-            teams.forEach((team) => {
-                team.appendChild(players[i])
-            });
-            i++;
+        let k = 0;
+        while (players.length > 0) {
+            teams[k].innerHTML += `<li>${players.pop()}</li>`;
+            k += 1;
+            if (k === teams.length) {
+                k = 0;
+            }
         }
+
+        // teams.forEach((team) => {
+        //     if (players.length > 0) {
+        //         team.innerHTML += `<li>${players.pop()}</li>`;
+        //     }
+        // });
     });
 });
