@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         players = shuffleArray(players);
 
-        let i = 0;
         let k = 0;
         while (players.length > 0) {
             teams[k].innerHTML += `<li>${players.pop()}</li>`;
@@ -53,11 +52,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 k = 0;
             }
         }
-
-        // teams.forEach((team) => {
-        //     if (players.length > 0) {
-        //         team.innerHTML += `<li>${players.pop()}</li>`;
-        //     }
-        // });
     });
 });
