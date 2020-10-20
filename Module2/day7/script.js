@@ -66,7 +66,7 @@ const createBlog = function () {
     newerBtn.addEventListener("click", () => {
         const blogContainer = document.querySelector(".col-md-8.blog-main");
         console.log(blogContainer);
-        blogContainer.innerHTML += `<div><p>
+        blogContainer.innerHTML += `<div class="blog-post"><p>
                         Cum sociis natoque penatibus et magnis
                         <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
                         Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
@@ -77,6 +77,7 @@ const createBlog = function () {
 };
 
 // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+function
 
 // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 function alertUser() {
