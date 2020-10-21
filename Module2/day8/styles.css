@@ -1,11 +1,41 @@
-.container {
-    height: 800px !important;
+.container.ex1 {
+    min-height: 400px;
+    /* display: flex; */
 }
 
-.container .row {
+.container.ex1 .row {
     border: 1px solid black;
     border-radius: 15px;
     color: white;
+    height: 400px;
+}
+
+.container .row div.col-6 {
+    background-color: rgb(101, 170, 101);
+    border-right: 1px solid black;
+    border-radius: 15px 0 0 15px;
+}
+
+.container .row div.col4 * div:first-of-type {
+    background-color: rgb(101, 170, 101);
+    border-right: 1px solid black;
+    border-radius: 0 15px 15px 0;
+}
+
+.container {
+    align-items: center;
+}
+
+.container .row .card {
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+/* Ex2________________________________________ */
+.container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .container .row div.col6 {
@@ -13,4 +43,28 @@
     background-color: rgb(101, 170, 101);
     border-right: 1px solid black;
     border-radius: 15px 0 0 15px;
+}
+
+.btn {
+    margin: 10px 0px 10px 27px;
+}
+
+.ex3 .btn.btn-secondary {
+    background-color: rgba(0, 0, 0, 0.034);
+    color: black;
+    margin: 0;
+    padding: 2px;
+}
+
+/* ex3 */
+.ex3 .card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer > .container {
+    text-align: left;
+    align-items: left;
+    justify-content: space-around;
+    flex-wrap: nowrap;
 }
