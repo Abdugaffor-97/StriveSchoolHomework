@@ -40,22 +40,16 @@ function removeLinks() {
 }
 
 // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-// function trimParagraph() {
-//     const paragraphs = document.querySelectorAll(".blog-post > p:nth-child(3)");
-//     // console.log(paragraps);
-//     const text = "";
-//     paragraphs.forEach((paragraph) => {
-//         console.log(paragraph);
-
-//         for (let i = 0; i <= paragraph.innerText.length; i++) {
-//             if (i >= 50) {
-//                 text += paragraph[i];
-//             }
-//         }
-//         paragraph.innerText = text;
-//         text = "";
-//     });
-// }
+function trimParagraph() {
+    const paragraphs = document.querySelectorAll(".blog-post > p:nth-child(3)");
+    // console.log(paragraps);
+    const text = "";
+    paragraphs.forEach((paragraph) => {
+        paragraph.innerHTML.substring(0, 51);
+        
+        console.log(paragraph);
+    });
+}
 
 // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
 const createBlog = function () {
@@ -77,13 +71,19 @@ const createBlog = function () {
 };
 
 // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-function
+// const removeBlog = function () {
+//     const blogContainer = document.querySelector(".blog-post:last-of-type");
+//     console.log(blogContainer);
+//     // blogContainer.innerHTML = "";
+//     const btn = document.querySelector(".btn btn-outline-primary");
+//     console.log("btn", btn);
+// };
 
 // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 function alertUser() {
     const users = document.querySelectorAll(".blog-post-meta a");
     users.forEach((user) => {
-        console.log(user);
+        // console.log(user);
         user.addEventListener("mouseenter", function (event) {
             alert("user");
             event.target.style.color = "red";
@@ -101,4 +101,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // trimParagraph();
     alertUser();
     createBlog();
+    // removeBlog();
 });

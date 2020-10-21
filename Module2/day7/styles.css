@@ -16,6 +16,7 @@ nav * {
 /* EX4) Write a selector to target the first blogpost */
 main > .row > div.blog-main > div.blog-post:first-of-type {
     color: rgb(110, 33, 33);
+    background-color: lightgrey;
 }
 
 /* 
@@ -44,6 +45,7 @@ div.blog-post:nth-of-type(2) p.blog-post-meta a {
 /*
 EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
 */
+
 
 /* EX10) Write a selector to target the footer */
 footer {

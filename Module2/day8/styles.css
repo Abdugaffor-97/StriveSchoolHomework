@@ -1,0 +1,16 @@
+.container {
+    height: 800px !important;
+}
+
+.container .row {
+    border: 1px solid black;
+    border-radius: 15px;
+    color: white;
+}
+
+.container .row div.col6 {
+    width: 400px;
+    background-color: rgb(101, 170, 101);
+    border-right: 1px solid black;
+    border-radius: 15px 0 0 15px;
+}
