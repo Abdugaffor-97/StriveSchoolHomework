@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day.
+- You can ask for tutor's help.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>My Favaurite Quran Reciter</title>
+
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+    </style>
+</head>
+
+<body>
+    <!-- EXERCISE 2 
+Implement a navigation bar using the bootstrap component
+This navigation bar must be linked to every section in your page
+-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" id="section-link" href="#display-none">Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- EXERCISE 1
+        Use the specific bootstrap component to implement a Breadcrumb
+        breadcrumb
+        -->
+    <nav class="breadcrumb ">
+        <div class='container d-flex'>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+        </div>
+    </nav>
+
+
+    <!-- EXERCISE 2 Create a Jumbotron section with a quick explanation / image of the website-->
+
+    <div class="jumbotron container py-2">
+        <img src="http://placehold.it/250" alt="">
+        <h1 class="display-4">The best reciters!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+
+
+
+
+
+
+    <!-- EXERCISE 7
+                Add a "Contact Me" form in the footer.
+                The "Contact Me" form has 2 fields:
+                - Email
+                - Text of the message
+                Use the correct Bootstrap styles for styling the buttons
+            -->
+
+    <!-- EXERCISE 8 
+                Add to the footer an extra column with the same links of the top nav.
+            -->
+
+    <!-- EXERCISE 9
+                Add a button "Add Track" under the track list the album, add a nice shadow transition when the button is hovered
+            -->
+
+    <!-- EXERCISE 10
+                On "Add Track" button, open a new modal.
+                The modal shall contain a form with:
+                - Track number
+                - Track name
+                - Track length
+                - Track featuring
+                - Live Track (checkbox)
+                The fields should be inside an Input Group and divided in 2 columns.
+            -->
+
+    <!-- EXERCISE 11
+                Add 2 bootstrap buttons at the bottom of the modal window:
+                - Close => clear the fields and close the modal
+                - Add => Add the track to the list of tracks in the main page and display an alert success message 
+                - The new list-element added to the list will appear with a fade-in transition effect
+                https://getbootstrap.com/docs/4.4/components/alerts/
+                [EXTRA] Make the message disappear after 5 seconds
+                https://www.w3schools.com/jsref/met_win_settimeout.asp
+            -->
+
+    <!-- EXERCISE 12
+                All the field (except for Feat. and Live Track) are required fields and requires validation.
+                If the user clicks on the Add button and some fields are empty, a warning alert must be show
+            -->
+
+    <!-- ############### -->
+    <!-- ###  EXTRA  ### -->
+    <!-- ############### -->
+
+    <!-- EXERCISE 13
+                For each "Album cover" in your page, add a tooltip with the title
+            -->
+
+    <!-- EXERCISE 14
+                Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
+            -->
+
+    <!-- EXERCISE 15
+                Add a Album Carousel with controls to display the top 10 albums
+            -->
+
+    <!-- EXERCISE 16
+                Make every section of the page "collapsable" if the user clicks on the section title
+            -->
+
+
+    <div class="container reciters">
+        <div class="row">
+            <!-- reciters goes here -->
+        </div>
+    </div>
+
+    <!-- EXERCISE 4
+                    Foreach album in the favorite list, use the Bootstrap Card to contain it.
+                    Use card layouts to format it in the best and more compatible way.
+                -->
+
+    <!-- EXERCISE 5
+    Place the tracklist inside a Bootstrap table.
+    The row column must be alternate.
+    Use one column for the track order, one of the title and one for the length.
+    (If you want, you can also add extra columns)
+-->
+
+    <div class="container my-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Length</th>
+                    <th scope="col"><input class="btn btn-outline-danger" type="button" value="Delete All"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Al Fatihah</td>
+                    <td>50 seconds</td>
+                    <td><input class="btn btn-outline-danger" type="button" value="Delete"></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Al-Baqarah</td>
+                    <td>1 hour and 59 minutes</td>
+                    <td><input class="btn btn-outline-danger" type="button" value="Delete"></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Al-Baqarah</td>
+                    <td>1 hour and 59 minutes</td>
+                    <td><input class="btn btn-outline-danger" type="button" value="Delete"></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- EXERCISE 6
+                    Add a DELETE bootstrap button on each row of the tracklist, with appropriate transitions on the various pseudo-class states 
+                    which will apply for the subsequent button you'll use.
+                    Clicking on the button the row must disappear. 
+                    Add a fade-out effect using a CSS transition effect
+                -->
+
+    <section id="review-album">
+        <h2>About section</h2>
+        <img src="http://placehold.it/250" alt="image of Abdurrohman al-ossi">
+        <h4>Ramadan 2019</h4>
+        <p>
+            Duration 12 hours
+            Mishary bin Rashid Alafasy (Arabic: مشاري بن راشد العفاسي‎), born in Kuwait, is a Quran reciter, imam,
+            preacher, and
+            Nasheed artist.[1][2][3] He studied in the Islamic University of Madinah's College of Qur'an, specializing
+            in the ten
+            qira'at and tafsir
+        </p>
+        <div class="container">
+            <ol class="row" id="suras">
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+                <li class="col col-6 col-lg-2">Al Fatihah</li>
+            </ol>
+        </div>
+    </section>
+
+
+
+    <section>
+        <h4>My favourite quran reciter</h4>
+        <p>Mishary bin Rashid Alafasy (Arabic: مشاري بن راشد العفاسي‎), born in Kuwait, is a Quran reciter, imam,
+            preacher, and
+            Nasheed artist.[1][2][3] He studied in the Islamic University of Madinah's College of Qur'an, specializing
+            in the ten
+            qira'at and tafsir.[4]
+            On 25 October 2008, Alafasy was awarded the first Arab Creativity Oscar by the Arab Creativity Union in
+            Egypt. The event
+            was sponsored by the Secretary-General of the Arab League, Amr Moussa as a recognition of Alafasy’s role in
+            promoting
+            Islamic principles and teachings.[5]
+
+            Alafasy was voted by readers to be the Best Qur'an Reciter in the 2012 About.com Readers' Choice Awards.[6]
+        </p>
+    </section>
+
+    <!-- EXERCISE 7
+Just covers!
+Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+-->
+
+    <!-- EXERCISE 8
+Implement a footer with some information / social links
+-->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">Facebook</i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">Twitter</i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">Instagram</i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x">Pinterest</i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- EXTRA:
+EXERCISE 9
+Create album details that are going to be toggled on and off by clicking on the album image
+-->
+
+    <!-- EXERCISE 10
+Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+-->
+
+    <!--
+EXERCISE 11
+Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
