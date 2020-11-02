@@ -45,3 +45,7 @@ section h4 {
         left: 0;
     }
 }
+
+table.table tr td{
+    animation: delete 3s forwards 1;
+}
