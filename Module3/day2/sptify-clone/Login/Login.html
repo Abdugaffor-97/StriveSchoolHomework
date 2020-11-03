@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8c59db8a18.js" crossorigin="anonymous"></script>
+
+    <title>Login - Spotify</title>
+    <link rel="icon" href="https://accounts.scdn.co/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: circular-spotify-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        hr {
+            border-top: 1px solid white;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .divide {
+            border-top: 1px solid #d9dadc;
+            display: block;
+            line-height: 1px;
+            margin: 15px 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .divide .divide-Text {
+            background: black;
+            font-size: 12px;
+            letter-spacing: 1px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        a {
+            color: rgb(3, 110, 3);
+        }
+
+        a:hover {
+            color: rgb(82, 136, 0);
+        }
+
+        .btn {
+            border-radius: 20px;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .btn-facebook {
+            background-color: #3b5998;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .btn-facebook:hover {
+            background-color: #3a61b3;
+            color: white;
+        }
+
+        .btn-apple {
+            background-color: black;
+            color: white;
+            border-color: white;
+            text-transform: uppercase;
+        }
+
+        .btn-apple:hover {
+            background-color: white;
+        }
+
+        input[type=checkbox] {
+
+            -ms-transform: scale(2);
+            /* IE */
+            -moz-transform: scale(2);
+            /* FF */
+            -webkit-transform: scale(2);
+            /* Safari and Chrome */
+            -o-transform: scale(2);
+            /* Opera */
+            padding: 10px;
+            color: green;
+        }
+
+        .btn-group-lg>.btn,
+        .btn-lg {
+            padding: 0.75rem;
+        }
+
+        .fa-apple {
+            margin-right: 5px;
+        }
+
+        .fa-facebook {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="max-width: 100%;">
+        <div class="justify-content-center d-flex mt-4">
+            <img style="max-width: 20%" src="Assets/Spotify_Logo_RGB_White.svg" alt="Spotify Logo White">
+        </div>
+        <hr>
+    </div>
+    <div class="container" style="max-width: 550px;">
+        <div class="row d-flex" style="text-align: center;">
+            <div class="col-12" style="color: white;">
+                <strong>To continue, log in to Spotify</strong>
+            </div>
+            <div class="col-12 my-1">
+                <a type="button" class="btn btn-facebook btn-lg btn-block"
+                    href="https://www.facebook.com/v7.0/dialog/oauth?client_id=174829003346&state=AQAAbXBjN5CxEfrurE%2FRXCjdPCibN2RCnJ7tM%2BTQmSrXFZbSA0T4d0S6u19Q9btEvbqj9eLr7p67AMEKnW9BdYwB1ICGhij1dPnUu7xXqviGLBvk1wNHIKquFE8eIhTRH%2FrAz%2B7ps8Uef7DXXVFcj10rjOb60BByYUkkGProad8w8fV9CCr0asnJ1zLtr9KhdNm8PeU1M9fSTv800z3nnTKpbtJ7SgWr%2BUyah2%2BDGkZs0HYaAkAqhUnpGpWZtCHEYtg%3D&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Ffacebook%2Fredirect"><i
+                        class="fab fa-facebook"></i>Continue with Facebook</a>
+            </div>
+            <div class="col-12 my-1">
+                <a type="button" class="btn btn-apple btn-lg btn-block"
+                    href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&response_type=code&response_mode=form_post&scope=name%20email&state=AQAAbXBjN5CxEfrurE%2FRXCjdPCibN2RCnJ7tM%2BTQmSrXFZbSA0T4d0S6u19Q9btEvbqj9eLr7p67AMEKnW9BdYwB1ICGhij1dPnUu7xXqviGLBvk1wNHIKquFE8eIhTRH%2FrAz%2B7ps8Uef7DXXVFcj10rjOb60BByYUkkGProad8w8fV9CCr0asnJ1zLtr9KhdNm8PeU1M9fSTv800z3nnTKpbtJ7SgWr%2BUyah2%2BDGkZs0HYaAkAqhUnpGpWZtCHEYtg%3D&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect"><i
+                        class="fab fa-apple"> </i>Continue with Apple</a>
+            </div>
+        </div>
+        <div class="divide" style="margin-bottom: 30px;">
+            <strong class="divide-Text">Or</strong>
+        </div>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email address or username"
+                    aria-describedby="emailHelp" name="userid">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1"
+                    name="password">
+            </div>
+            <div class="form-group form-check d-flex" style="justify-content: space-between;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                <button type="button" class="btn btn-success btn-lg" style="width: 150px;"
+                    onclick="check(this.form)">Log In</button>
+            </div>
+        </form>
+        <div style="text-align: center;">
+            <a href="#">Forgot your Password ?</a>
+        </div>
+        <hr>
+        <div>
+            <div class="row" style="text-align: center;">
+                <div class="col-12 mb-3">
+                    <strong>Don't have an Account ?</strong>
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-outline-light btn-lg btn-block">SIGN UP FOR SPOTIFY</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <span style="text-align: center; color: rgba(202, 204, 203, 0.253);">
+            If you click "Log in with Facebook" and are not a Spotify user, you will be registered and
+            you agree to Spotify's <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a>
+        </span>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function check(form) {
+
+            if ((form.userid.value.toLowerCase() === "admin") && form.password.value.toLowerCase() === "admin") {
+                window.location.replace("../home.html")
+            } else {
+                alert("Wrong Username and/or Password")
+            }
+
+        }
+    </script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="BandPage">
+
+    <title>Artiste Page</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
+
+    <link rel="stylesheet" href="artist.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <main>
+
+
+        <div class="bandInfo d-flex flex-column justify-content-center align-items-center">
+            <span>33,000,675 MONTHLY LISTENERS<br></span>
+            <h1>Queen</h1>
+            <div class="buttonWrapper d-flex flex-row justify-content-center align-items-center w-100">
+                <button class="m-2" id="playBtn">Play</button>
+                <button class="m-2 d-none" id="pauseBtn">Pause</button>
+                <button class="m-2" id="followBtn">Follow</button>
+                <button class="m-2 d-none" id="unFollowBtn">Unfollow</button>
+                <a class="m-2"><i class="fa fa-ellipsis-h"></i></a>
+            </div>
+            <div class="d-flex flex-row justify-content-center align-items-center w-100">
+                <span class="m-2">OVERVIEW</span>
+                <span class="m-2">RELATED ARTISTS</span>
+                <span class="m-2">ABOUT</span>
+            </div>
+            <!-- <nav class="navbar mainPageNav navbar-expand mt-5 mb-3">
+                <div class="container">
+                    <div class="justify-content-end" id="main-nav-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a id="overview" class="nav-link text-center" href="#overview">OVERVIEW</a></li>
+                            <li class="nav-item"><a id="relatedArtists" class="nav-link text-center" href="#relatedArtists">RELATED ARTISTS</a></li>
+                            <li class="nav-item"><a id="about" class="nav-link text-center" href="#about">ABOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> -->
+        </div>
+        <div class="container albumList">
+            <div class="overview" style="display:block">
+                <h2 class="mt-3">Albums</h2>
+                <div class="row m-4">
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/6/6c/Bohemian_Rhapsody_soundtrack.jpg"
+                                    alt="Bohemian">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Bohemian Rhapsody (The Original
+                                        Soundtrack)</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Queen_On_Air.jpg/220px-Queen_On_Air.jpg"
+                                    alt="OM_AIR">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">On Air</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://i1.wp.com/shanemcdonald.ie/queen/wp-content/uploads/2016/11/A_Night_at_the_Odeon__Hammersmith_1975.jpg?w=1080&ssl=1"
+                                    alt="Odeon">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">A Night At The Odeon</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://img.discogs.com/YL9350iCjOyzf1xBiOm7s9HZvXA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6056538-1447675865-6157.jpeg.jpg"
+                                    alt="RAINBOW">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Live At The Rainbow</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://img.discogs.com/YL9350iCjOyzf1xBiOm7s9HZvXA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6056538-1447675865-6157.jpeg.jpg"
+                                    alt="Rainbow_Deluxe">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Live At The Rainbow (Deluxe Edition)
+                                    </p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://www.metalkingdom.net/album/cover/d97/79692_queen_hungarian_rhapsody_queen_live_in_budapest_6.jpg"
+                                    alt="Hungarian">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Hungarian Rhapsody (Live In
+                                        Budapest)</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/9/99/Queen_The_Cosmos_Rocks_Album_Cover.jpg"
+                                    alt="Cosmos">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">The Cosmos Rocks</p>
+                                    <p class="bandName card-text text-center text-muted">Queen + Paul Rodgers</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/a/a1/Returnofthechampions.jpg"
+                                    alt="Resturn">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Return Of The Champions</p>
+                                    <p class="bandName card-text text-center text-muted">Queen + Paul Rodgers</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Queen_On_Fire_Live_At_The_Bowl.png/220px-Queen_On_Fire_Live_At_The_Bowl.png"
+                                    alt="OnFire">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Queen On Fire (Live At The Bowl)</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/3/38/Queen_-_Greatest_Hits_2.png"
+                                    alt="Greatest2">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Greatest Hits 2</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/9/9b/ClassicQueenalbumcover.png"
+                                    alt="Classic">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Classic Queen</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-md-3 col-lg-2 d-flex align-items-sm-stretch mb-4">
+                        <a class="w-100" style="text-decoration: none; color: white;" href="album.html">
+                            <div class="card h-100">
+                                <img class="card-img-top"
+                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Queen_II_%28album_cover%29.jpg/220px-Queen_II_%28album_cover%29.jpg"
+                                    alt="queen2">
+                                <div class="card-body">
+                                    <p class="musicName card-text text-center mb-2">Queen II</p>
+                                    <p class="bandName card-text text-center text-muted">Queen</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <nav class="sidenav navbar navbar-expand-md navbar-dark bg-dark" id="sideBlack">
+        <div class="sidenav">
+            <button class="navbar-toggler fixed-top" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mt-4" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex flex-column mb-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link brand active" href="../home.html">
+                            <img src="https://www.iconsdb.com/icons/preview/white/spotify-xxl.png" width="40px"
+                                height="40">
+                            Spotify <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link under" href="../home.html">
+                            <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link under" href="#">
+                            <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            Search
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link under" href="#">
+                            <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            Your library
+                        </a>
+                    </li>
+                    <li>
+                        <a style='color:#FFFFFF; text-decoration:none; padding-left: 10px;' data-page="page2"
+                            href="../Album Page/Album.html">
+                            <i class="fas fa-compact-disc"></i> Albums
+                        </a>
+                    </li>
+
+
+
+                    <li class="bottomNav nav-item active">
+                        <a class="nav-link inst-ban" href="#">
+                            <svg class="bi bi-file-arrow-down mr-2" width="1em" height="1em" viewBox="0 0 16 16"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4 1h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2zm0 1a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1H4z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="M4.646 8.146a.5.5 0 01.708 0L8 10.793l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 01.5.5v6a.5.5 0 01-1 0v-6A.5.5 0 018 4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Install App
+                        </a>
+
+                        <hr class="my-1" style="border-color:white!important; border-width: 3px;">
+
+                        <a class="nav-link inst-ban" href="#">
+                            <img src="images/diego.jpg" width="40px" height="40px"><br>
+                            Diego Banovaz
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <footer class="fixed-bottom">
+        <div class="row">
+            <div class="detailFav col col-6 col-lg-3 order-1 d-flex align-items-center">
+                <img id="imageFooter"
+                    src="https://img.discogs.com/QT8ppBlDmb7jh1Q4y8etne8g2BQ=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7084048-1530792189-1455.jpeg.jpg"
+                    alt="Queen">
+                <span class="mb-0 mx-auto" id="nameOfSong">Love Of My Life<br><span>Queen</span></span>
+                <a href="#" id="emptyHeart"><i class="fa fa-heart-o pl-4"></i></a>
+                <a href="#" id="fullHeart"><i class="fa fa-heart pl-4"></i></a>
+                <a href="#" id="outsidePlayer"><i class="fa fa-minus-square-o mx-auto pl-4"></i></a>
+            </div>
+            <div id="mainPlayer" style="height:5rem"
+                class="col col-12 col-lg-6 order-first order-lg-1 d-flex flex-column justify-content-center">
+                <div class="d-flex justify-content-center align-items-end">
+                    <a href="#" id="random"><i class="fa fa-random pl-4 "></i></a>
+                    <a href="#" id="back"><i class="fa fa-step-backward pl-4"></i></a>
+                    <a href="#" id="play" class="play"><i style="font-size: 2rem;"
+                            class="fa fa-play-circle-o pl-4 pt-2"></i><i style="font-size: 2rem; display:none;"
+                            class="fa fa-pause-circle-o pl-4 pt-2"></i></a>
+                    <a href="#" id="forward"><i class="fa fa-step-forward pl-4"></i></a>
+                    <a href="#" id="repeat"><i class="fa fa-repeat pl-4"></i></a>
+                    <audio id="main_audio" ontimeupdate='updateTrackTime(this);' preload="auto" loop="loop">
+                        <source src="Queen - Love of My Life.mp3" type="audio/mpeg">
+                        <embed hidden="true" autostart="false" loop="false" src="Queen - Love of My Life.mp3" />
+                    </audio>
+                </div>
+                <div>
+                    <input type="time" class="trackTime" value="" style="width:9% !important">
+                    <div class="visibleBar progress">
+                        <div id="movingSong" class="progress-bar insideTrack" role="progressbar"
+                            style="height: 100%;width:0%; background:white!important;" aria-valuenow="40"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <input type="range" min="00" max="100" value="1" class="slider" id="myRange"
+                        onchange="updateTextInput(this.value);">
+                    <span class="trackTime" id="totalTime">total time will be here</span>
+                </div>
+            </div>
+            <div class="volumeControl col col-6 col-lg-3 order-12 d-flex align-items-center">
+                <a href="#" id="random1"><i class="fa fa-align-justify pl-4 "></i></a>
+                <a href="#" id="random2"><i class="fa fa-desktop pl-4 "></i></a>
+                <a href="#" id="random3"><i class="fa fa-volume-up pl-4 "></i></a>
+                <div class="progress d-inline-block volumeBar" style="background:rgb(146, 146, 146)!important;">
+                    <div id="movingVolume" class="progress-bar insideVolume" role="progressbar"
+                        style="height: 100%;width:40%; background:white!important;" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <input type="range" min="00" max="100" value="1" class="slider2" id="myRange2"
+                    onchange="updateVolume(this.value);">
+            </div>
+
+    </footer>
+
+    <script src="../main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        function updateTrackTime(track) {
+            let currTime = track.currentTime;
+            let duration = track.duration;
+            let time1 = new Date()
+            let hours = Math.floor(currTime / 3600)
+            time1.setHours(hours);
+            let minutes = Math.floor((currTime - hours * 3600) / 60)
+            time1.setMinutes(minutes);
+            let seconds = Math.ceil(currTime - hours * 3600 - minutes * 60)
+            time1.setSeconds(seconds);
+            document.getElementsByClassName('trackTime')[0].value = time1.toString().split(" ")[4];
+            document.getElementById("movingSong").style.width = (currTime * 100 / duration) + "%";
+
+        }
+
+
+        // function updateTextInput(val) {
+        //     // let time1=new Date()
+        //     // let hours=Math.floor(val / 3600)
+        //     // time1.setHours(hours);
+        //     // let minutes=Math.floor((val-hours*3600) / 60)
+        //     // time1.setMinutes( minutes);
+        //     // let seconds=Math.ceil(val -hours*3600 -minutes * 60)
+        //     // time1.setSeconds(seconds );
+        //     // document.getElementsByClassName('trackTime')[0].value=time1.toString().split(" ")[4];
+        //     // document.getElementById("movingSong").style.width=Math.floor(val*100/420)+"%";
+        // }
+        function updateVolume(val) {
+            console.log(val);
+            document.getElementById("movingVolume").style.width = val + "%";
+        }
+
+
+        $(document).ready(function () {
+            $('.mainPageNav li a').click(function (e) {
+
+                $('.mainPageNav li.active').removeClass('active');
+                var $parent = $(this).parent();
+                $parent.addClass('active');
+                e.preventDefault();
+            });
+        });
+
+        window.onload = function () {
+            let arrayOfAs = document.querySelectorAll("#main-nav-collapse li a");
+            for (let i1 = 0; i1 < arrayOfAs.length; i1++) {
+                arrayOfAs[i1].addEventListener('click', function (event) {
+                    let myA = event.currentTarget.closest("a");
+                    document.getElementsByClassName("overview")[0].style.display = "none";
+                    document.getElementsByClassName("relatedArtists")[0].style.display = "none";
+                    document.getElementsByClassName("about")[0].style.display = "none";
+                    if (myA.id == "relatedArtists") {
+                        document.getElementsByClassName("relatedArtists")[0].style.display = "block";
+                    }
+                    else if (myA.id == "overview") {
+                        document.getElementsByClassName("overview")[0].style.display = "block";
+                    }
+                    else if (myA.id == "about") {
+                        document.getElementsByClassName("about")[0].style.display = "block";
+                    }
+
+
+                })
+            }
+            //other function -- set total time duration
+
+            let audio1 = document.querySelector("#main_audio");
+
+            let time2 = new Date()
+            let val = audio1.duration;
+            let hours = Math.floor(val / 3600);
+            time2.setHours(hours);
+            let minutes = Math.floor((val - hours * 3600) / 60);
+            time2.setMinutes(minutes);
+            let seconds = Math.ceil(val - hours * 3600 - minutes * 60)
+            time2.setSeconds(seconds);
+            console.log(time2.toString().split(" ")[4])
+            document.getElementById("totalTime").innerText = time2.toString().split(" ")[4];
+
+            //different function here - Play and Pause buttons (change between them)
+            let isPlaying = function (audio) { return !audio.paused; }
+            let a = document.getElementById('main_audio');
+            if (!(a.play instanceof Function)) {
+                a = document.getElementById("play");
+                isPlaying = function (audio) { return audio.playState == 2; }
+            }
+            $('.play').on('click', function () {
+                if (isPlaying(a)) {
+                    a.pause();
+                    document.querySelector(".play i:nth-child(2)").style.display = "none";
+                    document.querySelector(".play i:nth-child(1)").style.display = "inline-block";
+
+                }
+                else {
+                    a.play();
+                    document.querySelector(".play i:nth-child(1)").style.display = "none";
+                    document.querySelector(".play i:nth-child(2)").style.display = "inline-block";
+
+                }
+            });
+
+        }
+        function updateTextInput(sTime) {
+            let audio2 = document.querySelector("#main_audio");
+            audio2.currentTime = sTime * audio2.duration / 100;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

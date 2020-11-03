@@ -1,0 +1,488 @@
+
+            /*Sidebar*/
+            .sidenav {
+                position: fixed; 
+                z-index: 1; 
+                top: 0; 
+                left: 0;
+                background-color:black; 
+                padding:1rem;
+                border-radius: 25px 25px 25px 25px;
+      
+              }
+              #collapsedButton{
+                  width:3.4rem;
+                  }
+              @media only screen and (min-width: 768px){
+                  .sidenav{
+                  height:100%;
+                  width:10rem;
+                  border-radius: 0;
+                  }
+                  .bottomNav{
+                  position: fixed;
+                  bottom:10rem;
+                  }
+                  main{
+                      margin-left: 10rem;
+                  }
+      
+              }
+              @media only screen and (min-width: 933px){
+                .bottomNav{
+                bottom:5rem;
+                }
+              }
+              
+              .navbar-toggler {
+                background-color: black !important;
+                padding: 0px;
+                ;
+              }
+              #sideBlack {
+                background-color: black !important;
+              }
+      
+              .nav-link {
+                  color:white !important;
+                  font-size: small !important;
+                  font-weight:bold !important;
+              }
+              
+      
+              .brand {
+                  font-size: larger !important;
+                  font-weight: bolder !important;
+              }
+      
+              .button {
+              background-color:transparent; /* Green */
+              border: 2px solid white;
+              color: white;
+              padding: 10px 30px 10px 30px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 12px;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 20%;
+              width: 100px;
+              }
+      
+              .button-sign{
+                  background-color: white;
+                  color:black
+              }
+              
+              .nav-link1{
+                  display: inline-block;
+                  color:white !important;
+                  font-size: small !important;
+                  font-weight:bold !important;
+                  padding-left: 6px;
+              }
+      
+              .hovereffect {
+                width:100%;
+                height:100%;
+                float:left;
+                overflow:visible;
+                position:relative;
+                cursor:pointer;
+                }
+      
+                .hovereffect img {
+                display:block;
+                position:relative;
+                -webkit-transition:all .3s linear;
+                transition:all .3s linear;
+                }
+      
+                .hovereffect:hover img {
+                -ms-transform:scale(1.1);
+                -webkit-transform:scale(1.1);
+                transform:scale(1.1);
+                }
+      
+              .top-li:hover {
+                color: white !important;
+                text-decoration: underline;
+      
+              }
+      
+              .signup {
+                background-color: white;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 1.50px;
+                border: 2px solid transparent;
+                border-radius: 500px;
+                padding: 8px 30px;       
+                width: 100%;
+                margin-bottom:8px;   
+              }
+      
+              .login{
+                background-color:black;
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 1.50px;
+                border: 2px solid white;
+                border-radius: 500px;
+                padding: 8px 30px; 
+                width: 100%;
+                margin-bottom:10px;
+              }
+      
+              .inst-ban {
+                font-size: 12px !important;
+              }
+      
+              .inst-ban:hover{
+                font-style:italic;
+                color:lightgrey;
+              }
+      
+              .under:hover {
+                border-left: 3px solid green;
+              }
+              /*footer*/
+      
+              footer{
+                  background-color: 	rgb(40, 40, 40);
+              }
+              #imageFooter{
+                  height:3rem;
+                  margin: 1rem;
+              }
+              #nameOfSong{
+                  display: inline-block;
+                  color:rgb(146, 146, 146);
+                  font-size: .7rem;
+                  font-weight: bold;
+              }
+              #nameOfSong span{
+                  font-size: .6rem;
+                  font-weight: normal;
+              }
+              footer .fa{
+                  color:rgb(146, 146, 146);
+              }
+              #fullHeart{
+                  display:none !important;
+      
+              }
+              .detailFav:hover>span, .detailFav:hover>a>i{
+                  color:white!important;
+              }
+              #fullHeart i{
+                  color: green !important;
+                  border-color: green !important;
+              }
+              #emptyHeart:hover{
+                  display:none !important;
+              }
+              #emptyHeart:hover~#fullHeart{
+                  display:inline-block !important;
+              }
+              #outsidePlayer:active>i{
+                  color:green !important;
+              }
+      
+              .trackTime{
+                  width:10%;
+                  font-size: .7rem;
+                  background: rgb(40, 40, 40);
+                  border:none;
+                  color:rgb(146, 146, 146);
+                  opacity: 0.6;
+                  -webkit-transition: .2s;
+                  transition: opacity .2s;
+                  font-weight: bold;
+              }
+              #mainPlayer:hover .trackTime, #mainPlayer:hover a i{
+                  opacity: 1;
+                  color:white;
+              }
+              #random:active>i, #back:active>i, #play:active>i, #forward:active>i, #repeat:active>i {
+                  opacity: 1;
+                  color:green !important;
+              }
+              .trackTime::-webkit-clear-button {
+                  display: none;
+              }
+              .trackTime::-webkit-inner-spin-button {
+                  display: none;
+              }
+              .trackTime::-webkit-datetime-edit-hour-field {
+                  display:none;
+                  }
+              .slider {
+                  -webkit-appearance: none;
+                  width: 77%;
+                  height: .4rem;
+                  background: rgb(146, 146, 146);
+                  outline: none;
+                  opacity: 0;
+                  -webkit-transition: .2s;
+                  transition: opacity .2s;
+                  cursor: pointer;
+                  z-index:1 !important;
+                  position: absolute;
+                  left:10.5%;
+                  top:78%;
+      
+              }
+      
+              /*#mainPlayer:hover .slider {
+                  opacity: 1;
+              }*/
+              .slider::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 25px;
+                  height:.3rem;
+                  background: #4CAF50;
+      
+              } 
+              .slider::-moz-range-thumb {
+                  width: 25px;
+                  height: 2rem;
+                  background: #4CAF50;
+      
+              }
+              
+              .volumeControl:hover i, .volumeControl:hover div, .volumeControl:hover .insideVolume{
+                  opacity: 1!important;
+                  color:white!important;
+              }
+              .visibleBar{
+                  position:absolute;
+                  left:10.5%;
+                  top:78%;
+                  background:rgb(146, 146, 146)!important;
+                  height:.4rem !important;
+                  width:77% !important;
+                  z-index:-1 !important;
+                  opacity:0.6 !important;
+              }
+              #movingSong{
+                  opacity:0.6;
+              }
+              #mainPlayer:hover .insideTrack{
+                  opacity:1;
+                  background-color: white!important;
+              }
+              #totalTime{
+                  position:relative;
+                  left:85%
+              }
+              .slider2{
+                  -webkit-appearance: none;
+                  position: absolute !important;
+                  left:55%;
+                  opacity: 0;
+                  width:27%;
+                  z-index: 1;
+                  cursor: pointer;
+              }
+              .progress.d-inline-block.volumeBar{
+                  width:5rem;
+                  height:.4rem;
+                  position: absolute !important;
+                  left:55%;
+                  opacity: 0.5;
+                  width:27%;
+                  z-index: -1;
+              }
+              #random3{
+                  position: absolute !important;
+                  left:39%;
+              }
+      
+      
+      
+              /*mainpage*/
+      
+              main{
+                  background-color: rgb(24, 24, 24);
+                  z-index: -2;
+                  height: 100%;
+      
+              }
+              .bandInfo{
+                  position:relative !important;
+                  color:white;
+                  padding-top: 5rem;
+                  z-index:0;
+              }
+              .bandInfo span{
+                  color:rgb(146, 146, 146);
+              }
+              .bandInfo::before{
+                  content:"";
+                  filter: brightness(40%);
+                  background: url(https://www.queenonline.com/global/uploads/p05lgv2z.jpg);
+                  opacity:0.25;
+                  background-size: cover;
+                  top:0;
+                  left:0;
+                  bottom: 0;
+                  right: 0;
+                  position:absolute;
+                  object-fit:cover;  
+                  z-index: -1;
+              }
+              .bandInfo::after{
+                  content:"";
+                  background: rgba(24,24,24);
+                  top:93%;
+                  left:0;
+                  bottom: 0;
+                  right: 0;
+                  position:absolute;
+                  -webkit-mask-image: linear-gradient(to bottom, rgba(24,24,24,0), rgba(24,24,24,1)); 
+                  z-index:1 ;
+              }
+              .bandInfo>span{
+                  font-size: 0.7rem;
+              }
+      
+              h1{
+                  font-size: 3.5rem !important;
+                  font-weight: bold !important;
+              }
+              button{
+                  width:8rem;
+                  border-radius: 25px 25px 25px 25px !important;
+                  cursor: pointer !important;
+                  height:2.2rem;
+                  font-size: .8rem;
+                  
+              }
+              button:focus {
+                  outline:none!important;
+                  }
+              .buttonWrapper button:nth-child(1){
+                  background-color: rgb(29, 185, 84) !important;
+                  border:solid 1px green!important;
+                  color:white;
+                  transition: transform .3s;
+              }
+      
+              .buttonWrapper button:hover{
+                  background-color: green !important;
+              }
+              .buttonWrapper button:nth-child(1):active{
+                  transform:scale(0.95);
+              }
+      
+              .buttonWrapper button:nth-child(2){
+                  background:transparent!important;
+                  border:solid 2px white!important;
+                  color:white;
+                  opacity:0.7;
+      
+                  transition: transform .3s;
+              }
+              .buttonWrapper button:nth-child(2):hover{
+                  background-color: green !important;
+              }
+              .buttonWrapper button:nth-child(2):active{
+                  transform:scale(0.95);
+                  background:transparent!important;
+              }
+              .buttonWrapper i{
+                  opacity:0.7;
+                  cursor: pointer;
+              }
+              .buttonWrapper i:hover{
+                  opacity:1;
+              }
+              .buttonWrapper i:active{
+                  transform:scale(0.8);
+              }
+      
+              .mainPageNav li {
+                  float: left;
+                  position: relative;
+              }
+              .mainPageNav a{
+                  opacity: 0.5;
+              }
+              .mainPageNav .active a{
+                  opacity: 1!important;
+              }
+              .mainPageNav .active a::after {
+                  border-bottom: .1rem solid #5bc0eb;
+                  bottom: .1rem;
+                  content: " ";
+                  left: 0;
+                  width:2rem;
+                  margin: 0 auto;
+                  position: absolute;
+                  right: 0;
+              }
+              [class*="albumList"]{
+                  color:white;
+                  padding-bottom: 10rem;
+                  height:100%;
+              }
+              @media only screen and (min-width: 993px){
+                  .albumList{
+                  color:white;
+                  padding-bottom: 5rem;
+                  }
+                  .bottomNav{
+                      margin-top: 5rem;
+                      position: fixed;
+                      bottom:5rem;
+                  }
+              }
+              .albumList h2{
+                  font-weight: bold;
+              }
+              .albumList .card{
+                  background: transparent!important;
+                  width:100%;
+                  cursor: pointer;
+              }
+              .albumList .card.card-img-top{
+                  object-fit:cover !important;
+              }
+              .albumList .card:hover{
+                  filter:brightness(150%);
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              }
+              .albumList .card:active{
+                  box-shadow: none;
+                  filter:brightness(200%);
+              }
+              .musicName{
+                  font-size: .7rem;
+                  font-weight: 800;
+              }
+              .bandName{
+                  font-size: .6rem;
+              }
+              .card-img-top{
+                  height:65% !important;
+                  object-position: top;
+                  object-fit: cover!important;
+              }
+              .freddyImage{
+                  width:100%
+                  }
+              @media only screen and (min-width: 768px){
+                  .freddyImage{
+                  width:60%
+                  }
+              }
+              .overview, .relatedArtists, .about{
+                  transition: all 1s;
+              }
+      
+      
+      

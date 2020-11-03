@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="/styes.css">
+    <title>SPOTIFY CLONE</title>
+    <link rel="icon" href="https://accounts.scdn.co/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+
+<body>
+    <!-- Nav bar -->
+
+
+
+    <!-- sidebar -->
+
+
+    <nav class='left-nav'>
+        <div class=''>
+            <a href="home.html"><i class="text-white fab fa-spotify fa-2x my-3 mx-2"> Spotify</i></a>
+            <div>
+                <ul>
+                    <li class='left-border-green'>
+                        <a class="page1 active" data-page="page1" href='home.html'>
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page2" data-page="page2">
+                            <i class="fas fa-search"> </i> Search
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page2" data-page="page2">
+                            <i class="fas fa-stream"></i> Your library
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page2" data-page="page2" href="ArtistePage/artist.html">
+                            <i class="fas fa-mitten"></i> Artists
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page2" data-page="page2" href="Album Page/Album.html">
+                            <i class="fas fa-compact-disc"></i> Albums
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class='text-center p-0 mb-5 pb-5'>
+                    <li>
+                        <a href="Login/Login.html" class='btn btn-primary rounded-pill bg-light text-dark ml-2'>SIGN
+                            UP</a>
+                        <i class="fas fa-user-plus d-none"></i>
+                    </li>
+                    <li>
+                        <a href="Login/Login.html"
+                            class='btn btn-dark my-2 rounded-pill bg-light text-dark ml-2'>LOGIN</a>
+                        <i class="fas fa-sign-in-alt d-none"></i>
+
+                    </li>
+                    <span class='text-white'>Cookie</span><span class='text-white border-left ml-2 pl-2'>Privacy</span>
+                    <p class='pr-5 mr-4 text-white'>Policy</p>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- When the user's screen smaller than 767px display this navbar -->
+    <nav class='small-screen d-none'>
+        <div>
+            <a href="home.html"><i class="pl-0 text-white fab fa-spotify fa-3x my-3 mx-2"></i></a>
+            <ul>
+                <li class='left-border-green'>
+                    <a class="page1 active"><i class="text-white fas fa-home fa-2x"></i></a>
+                </li>
+                <li>
+                    <a class="page2" data-page="page2">
+                        <i class="text-white fas fa-search fa-2x"></i></a>
+                </li>
+                <li>
+                    <a><i class="text-white fas fa-stream fa-2x"></i></a>
+                </li>
+
+                <li>
+                    <a class="page2 text-white" data-page="page2" href="ArtistePage/artist.html">
+                        <i class="fas fa-mitten fa-2x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="page2 text-white fa-2x" data-page="page2" href="Album Page/Album.html">
+                        <i class="fas fa-compact-disc"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class=''>
+                <li>
+                    <a href="Login/Login.html"><i class="text-white fas fa-user-plus fa-2x"></i></a>
+                </li>
+                <li>
+                    <a href="Login/Login.html"><i class="text-white fas fa-sign-in-alt fa-2x"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- page content -->
+    <div class='left-hand-side'>
+        <nav class="">
+            <button class='btn btn-outline-secondary mt-3'>Count Unique</button>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <div>
+                        <a class="nav-link active" href="#">TRENDING</a>
+                        <div></div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div>
+                        <a class="nav-link" href="#">PODCAST</a>
+                        <div></div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div>
+                        <a class="nav-link" href="#">MOODS AND GENRES</a>
+                        <div></div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div>
+                        <a class="nav-link" href="#">NEW RELEASES</a>
+                        <div></div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div>
+                        <a class="nav-link" href="#">DISCOVER</a>
+                        <div></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container mt-4">
+            <h2 class='text-white'>#THROWBACKTHURSDAY</h2>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-6" id='album'>
+
+            </div>
+
+        </div>
+
+
+        <div class="container pb-5">
+            <h1 class='text-white'>Cassifiche</h1>
+            <button class='btn btn-outline-secondary mb-5'>List Albums</button>
+
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-6" id="album1">
+                <!-- Albums2 -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Player -->
+    <div class="player  ">
+
+        <div class="row">
+            <div class="col-4 mt-2 d-flex">
+                <div class="card overflow-hidden"
+                    style="max-width: 90%; height: 50px; background-color:#282828; box-shadow:none">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="images/singer9.jpeg" class="card-img" alt="..." style='width:100%; height:50px'>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text" style='font-size:14px'>This is a wider.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="far fa-heart mt-3 ml-2"></i>
+                <i class="fas fa-align-justify mt-3 ml-2"></i>
+            </div>
+            <div class="col-6 pt-2 pb-0 ">
+                <div style='position: relative; left: 23%'>
+                    <i class="mx-2 fas fa-random"></i>
+                    <i class="mx-2 fas fa-step-backward"></i>
+                    <i class="far mx-2 fas fa-play"></i>
+                    <i class="mx-2 fas fa-step-forward"></i>
+                    <i class="mx-2 fas fa-redo-alt"></i>
+                </div>
+                <div class='d-flex'><b class='mx-2 mt-3'>8:40</b>
+                    <form style='width:70%'>
+                        <div class="form-group">
+                            <label for="formControlRange"></label>
+                            <input type="range" class="form-control-range" id="formControlRange">
+                        </div>
+                    </form><b class='mx-2 mt-3'>16:45</b>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class='d-flex'>
+                    <i class="fas fa-bars mx-1" style='position:relative; top: 25px;'></i>
+                    <i class="fas fa-desktop mx-1" style='position:relative; top: 25px;'></i>
+                    <i style='position:relative; top: 25px;' class="fas fa-volume-up mx-1"></i>
+                    <div>
+                        <form style='width:100px'>
+                            <div class="form-group">
+                                <label for="formControlRange"></label>
+                                <input type="range" class="form-control-range" id="formControlRange">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Player -->
+
+
+    <script>
+
+        fetch("https://rapidapi.p.rapidapi.com/search?q=eminem", {
+            method: "GET",
+            headers: {
+                "x-rapidapi-key":
+                    "8085f2770emshc1cb3109961c5b5p130d8djsn976ae5a2d25d",
+                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                // console.log(data.data);
+                const album = document.getElementById("album");
+                console.log(album)
+                for (let i = 0; i < data.data.length; i++) {
+                    // console.log(data.data[i])
+                    album.innerHTML += `
+                    <div class="col my-1 px-2 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="${data.data[i].album.cover}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">${data.data[i].album.title}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+
+                }
+
+            })
+
+            .catch((err) => {
+                console.error(err);
+            });
+
+        const btn = document.querySelector('.btn-outline-secondary.mb-5')
+        btn.addEventListener('click', () => {
+            fetch("https://rapidapi.p.rapidapi.com/search?q=eminem", {
+                method: "GET",
+                headers: {
+                    "x-rapidapi-key":
+                        "8085f2770emshc1cb3109961c5b5p130d8djsn976ae5a2d25d",
+                    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    const album = document.getElementById("album1");
+                    // console.log(album)
+                    for (let i = 0; i < data.data.length; i++) {
+                        album.innerHTML += `
+                    <div class="col my-1 px-2 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="${data.data[i].album.cover}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">${data.data[i].title_short}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                    }
+
+                })
+
+                .catch((err) => {
+                    console.error(err);
+                });
+        })
+
+        const btn2 = document.getElementsByClassName('btn btn-outline-secondary.mt-3')
+        btn2.addEventListener('click', () => {
+            const albumsNames = document.querySelectorAll('.card-body .card-text')
+            console.log(albumsNames)
+        })
+
+
+    </script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
