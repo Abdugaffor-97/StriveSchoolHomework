@@ -35,7 +35,38 @@ or punctuation.  Consider capital letters to be the same as lower case
     anagrams('RAIL! SAFETY!', 'fairy tales') --> True
     anagrams('Hi there', 'Bye there') --> False
 */
-function anagrams(word1, word2) {}
+function countChar(character, string) {
+    character = character.toLowerCase();
+    let quantity = 0;
+    string2 = string.split(" ").join("");
+    for (char of [...new Set(string2.toLowerCase())]) {
+        if (character === char) {
+            quantity += 1;
+        }
+    }
+    return { character: `${character}`, quantity: quantity };
+}
+
+function anagrams(word1, word2) {
+    let output1 = [];
+    let output2 = [];
+
+    for (char of word1) {
+        if (char !== " ") {
+            output1.push(countChar(char, word2));
+        }
+    }
+
+    for (char of word2) {
+        if (char !== " ") {
+            output2.push(countChar(char, word1));
+        }
+    }
+    output1.sort((a, b) => (a.character > b.character ? 1 : -1));
+    output1.sort((a, b) => (a.character > b.character ? 1 : -1));
+
+    return [output1, output2];
+}
 
 /* 3) ANAGRAMS 2
 Given a word and a list of possible anagrams, select the correct sublist.
@@ -106,7 +137,7 @@ step has spaces on the right hand side!
         '####' */
 function steps(number) {
     for (let i = 1; i <= number; i++) {
-        console.log("#".repeat(i));
+        console.log(`#`.repeat(i));
     }
 }
 
@@ -136,6 +167,10 @@ where each subarray is of length size
 
 function chunk(array, number) {
     const output = [];
+    while (array.length > 0) {
+        output.push(array.splice(0, number));
+    }
+    return output;
 }
 
 /* 9) PYRAMID
@@ -154,8 +189,8 @@ pyramid has spaces on both the left and right hand sides
         ' ### '
         '#####' */
 function pyramid(number) {
-    for (let i = 1; i <= number; i++) {
-        console.log("#".repeat(i));
+    for (let i = 0; i < number; i++) {
+        console.log(" ".repeat(number - i - 1) + "#".repeat(2 * i + 1));
     }
 }
 
@@ -177,8 +212,10 @@ and returns a NxN spiral matrix.
         [10,  9,  8, 7]]
 */
 function matrix(number) {
+    const array = [...Array(number ** 2).keys()];
     const output = [];
-    for (let i = 1; i <= number ** 2; i += 1) {
-        output.push([])
+    while (array.length > 0) {
+        output.push(array.splice(0, number));
     }
+    return output;
 }
