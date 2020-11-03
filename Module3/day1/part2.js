@@ -212,7 +212,7 @@ and returns a NxN spiral matrix.
         [10,  9,  8, 7]]
 */
 function matrix(number) {
-    const array = [...Array(number ** 2).keys()];
+    const array = [...Array(1, (number ** 2)+1).keys()];
     const output = [];
     while (array.length > 0) {
         output.push(array.splice(0, number));
