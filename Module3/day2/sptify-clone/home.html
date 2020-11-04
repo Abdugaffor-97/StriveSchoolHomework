@@ -236,22 +236,23 @@
 
     <script>
 
-        fetch("https://rapidapi.p.rapidapi.com/search?q=eminem", {
-            method: "GET",
-            headers: {
-                "x-rapidapi-key":
-                    "8085f2770emshc1cb3109961c5b5p130d8djsn976ae5a2d25d",
-                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                // console.log(data.data);
-                const album = document.getElementById("album");
-                console.log(album)
-                for (let i = 0; i < data.data.length; i++) {
-                    // console.log(data.data[i])
-                    album.innerHTML += `
+        window.onload = function () {
+            fetch("https://rapidapi.p.rapidapi.com/search?q=eminem", {
+                method: "GET",
+                headers: {
+                    "x-rapidapi-key":
+                        "8085f2770emshc1cb3109961c5b5p130d8djsn976ae5a2d25d",
+                    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // console.log(data.data);
+                    const album = document.getElementById("album");
+                    console.log(album)
+                    for (let i = 0; i < data.data.length; i++) {
+                        // console.log(data.data[i])
+                        album.innerHTML += `
                     <div class="col my-1 px-2 d-flex justify-content-center">
                         <div class="card" style="width: 18rem;">
                             <img src="${data.data[i].album.cover}" class="card-img-top" alt="...">
@@ -262,13 +263,14 @@
                     </div>
                     `
 
-                }
+                    }
 
-            })
+                })
 
-            .catch((err) => {
-                console.error(err);
-            });
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
 
         const btn = document.querySelector('.btn-outline-secondary.mb-5')
         btn.addEventListener('click', () => {
