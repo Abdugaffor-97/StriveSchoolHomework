@@ -1,3 +1,21 @@
+const showImg = function (url) {
+    const div = document.createElement("div");
+
+    div.style.position = "absolute";
+    div.style.width = "90%";
+    div.style.height = "90vh";
+    div.style.top = "2px";
+    div.appendChild(img);
+
+    div.innerHTML = `
+    <div class="card bg-dark text-white">
+        <img src='${url}'>
+    </div>
+    `;
+
+    document.body.appendChild(div);
+};
+
 const getImgs = async (query) => {
     let response = await fetch(
         `http://www.splashbase.co/api/v1/images/search?query=${query}`
@@ -11,7 +29,7 @@ const getImgs = async (query) => {
 const loadImages = (query) => {
     getImgs(query).then((images) => {
         const cards = document.querySelectorAll(".card");
-
+        const body = document.querySelector("body");
         cards.forEach((card, index) => {
             const img = document.createElement("img");
             if (images[index]) {
@@ -22,51 +40,9 @@ const loadImages = (query) => {
 
             card.removeChild(card.firstElementChild);
             card.insertBefore(img, card.firstChild);
-
-            // EX 3
-            const viewBtn = card.querySelector("button:first-child");
-            viewBtn.dataToggle = "modal";
-            viewBtn.dataTarget = `#exampleModal`;
-            console.log(viewBtn);
         });
-
-        // ex 3
-        // const viewBtns = cards.querySelectorAll(
-        //     ".card-body button:first-child"
-        // );
-        // console.log(viewBtns);
     });
+
+    // EX 3
+    const viewBtns = card.querySelector("button:first-child");
 };
-
-// ex3
-const viewBtns = document.querySelectorAll(
-    ".card .card-body button:first-child"
-);
-// console.log(viewBtns);
-viewBtns.forEach((btn, index) => {
-    btn.dataToggle = "modal";
-    dataTarget = "#exampleModal";
-
-    const div = document.createElement("div");
-    div.className = "modal fade";
-
-    div.innerHTML = `
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-    `;
-});
