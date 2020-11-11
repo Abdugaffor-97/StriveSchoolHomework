@@ -37,7 +37,7 @@ const addTrow = function (user) {
     <td>${user.name}</td>
     <td>${user.username}</td>
     <td>${user.email}</td>
-    <td>${user.website}</td>
+    <td><a href="detail.html?id=${user.id}">Detail</a></td>
   </tr>
   `;
 };
@@ -80,7 +80,26 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const sortBtn = document.querySelector("#sort");
+  let isReversed = false;
   sortBtn.onclick = function () {
-    let sortedUsers = filteredUsers.sort((item) => {});
+    let sortedUsers = filterUsers.sort((user1, user2) => {
+      if (user1.name.toLowerCase() < user2.name.toLowerCase()) {
+        return 1;
+      }
+      if (user1.name.toLowerCase() > user2.name.toLowerCase()) {
+        return -1;
+      }
+
+      return 0;
+    });
+    console.log(isReversed);
+    if (!isReversed) {
+      updateTableBody(sortedUsers);
+      isReversed = true;
+    } else {
+      updateTableBody(sortedUsers.reverse());
+      isReversed = false;
+    }
+    console.log(sortedUsers);
   };
 });
