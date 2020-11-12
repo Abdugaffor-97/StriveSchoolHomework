@@ -34,7 +34,7 @@
   </nav>
 
   <div class="container">
-
+    <div id="details"></div>
   </div>
 
 
@@ -59,7 +59,9 @@
 
     window.onload = async () => {
       const url = 'https://striveschool-api.herokuapp.com/api/product/'
-      let productContainer = document.querySelector('.container')
+      const productContainer = document.querySelector('.container')
+      const detailContainer = productContainer.querySelector('#details')
+
       try {
         const response = await fetch(url, {
           headers: {
@@ -73,7 +75,7 @@
         const productId = window.location.search.split('=')[1]
         product = products.filter(product => product._id === productId)[0]
         console.log(product)
-        productContainer.innerHTML = addCard(product)
+        detailContainer.innerHTML = addCard(product)
 
       } catch (error) {
         console.log(error)
