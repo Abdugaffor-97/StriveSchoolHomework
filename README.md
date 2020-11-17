@@ -1,6 +1,19 @@
 # StriveSchoolHomework
 
-Strive School Homeworks
+## Programming Foundations
 
-# Module 4 -> React module
+## Module 2
+
+### UX/UI
+
+## Module 3
+
+### Advanced JavaScript
+
+## Module 4
+
+### React
+
 day1 - React Intro
+
+day2 -
