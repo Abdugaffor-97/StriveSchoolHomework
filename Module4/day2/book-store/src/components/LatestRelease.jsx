@@ -25,30 +25,25 @@ class LatestBooks extends React.Component {
       <>
       <Dropdown className='mb-2'>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
-          { this.state.category }
+          { this.state.data[0].category.toUpperCase() }
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
           <Dropdown.Item href="#/action-1" onClick={()=> {
-            alert('Fantasty')
-              return this.setState({ data: history, category: 'Fantasty' })}
+              return this.setState({ data: history })}
            }>Fantasty</Dropdown.Item>
 
           <Dropdown.Item href="#/action-2" onClick={()=> {
-            alert('History')
-            return this.setState({ data: history, category: 'History' })}
+            return this.setState({ data: history })}
              }>History</Dropdown.Item>
           <Dropdown.Item href="#/action-3" onClick={()=> {
-            alert('Horror')
-            return this.setState({ data: horror, category: 'Horror' })}
+            return this.setState({ data: horror })}
              }>Horror</Dropdown.Item>
           <Dropdown.Item href="#/action-3" onClick={()=> {
-            alert('Romance')
-            return this.setState({ data: romance, category: 'Romance' })}
+            return this.setState({ data: romance })}
              }>Romance</Dropdown.Item>
           <Dropdown.Item href="#/action-3" onClick={()=> {
-            alert('SciFi')
-            return this.setState({ data: scifi, category: 'SciFi' })}
+            return this.setState({ data: scifi })}
              }>SciFi</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
