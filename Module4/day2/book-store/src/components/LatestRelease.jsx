@@ -16,7 +16,6 @@ class LatestBooks extends React.Component {
 
   state = {
     data: fantasty,
-    category: 'Fantasty'
   }
 
   render() {
