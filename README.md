@@ -1,5 +1,7 @@
 # Strive School Homework
+
 ## Module 1
+
 ### Programming Foundations
 
 ## Module 2
@@ -16,4 +18,4 @@
 
 day1 - React Intro
 
-day2 - 
+day2 - Create book store with React
