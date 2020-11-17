@@ -1,6 +1,6 @@
-# StriveSchoolHomework
-
-## Programming Foundations
+# Strive School Homework
+## Module 1
+### Programming Foundations
 
 ## Module 2
 
@@ -16,4 +16,4 @@
 
 day1 - React Intro
 
-day2 -
+day2 - 
