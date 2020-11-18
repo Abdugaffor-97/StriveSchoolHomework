@@ -5,52 +5,56 @@ import romance from "../data/romance.json"
 import scifi from "../data/scifi.json"
 
 import React from 'react'
-import { Container, Row, Col, Dropdown, Button, Card } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Container, Row, Col, Dropdown, Button, Card, DropdownButton, FormControl } from 'react-bootstrap'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
+const BookCategories = ['fantasty', 'history', 'romance', 'scifi', 'horror']
+const books = {
+  fantasty,
+  history,
+  romance,
+  scifi,
+  horror,
+}
 
 
 
 class LatestBooks extends React.Component {
 
   state = {
-    data: fantasty,
+    data: books.fantasty,
+    categorySelected: 'fantasy',
+  }
+
+
+  handleDropdownChange = (category) => {
+    this.setState({data: books.category, categorySelected: category})
+  }
+
+  handleSearchQuery = () => {
+
   }
 
   render() {
-    console.log('items', fantasty)
     return (
       <>
-      <Dropdown className='mb-2'>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          { this.state.data[0].category.toUpperCase() }
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1" onClick={()=> {
-              return this.setState({ data: history })}
-           }>Fantasty</Dropdown.Item>
-
-          <Dropdown.Item href="#/action-2" onClick={()=> {
-            return this.setState({ data: history })}
-             }>History</Dropdown.Item>
-          <Dropdown.Item href="#/action-3" onClick={()=> {
-            return this.setState({ data: horror })}
-             }>Horror</Dropdown.Item>
-          <Dropdown.Item href="#/action-3" onClick={()=> {
-            return this.setState({ data: romance })}
-             }>Romance</Dropdown.Item>
-          <Dropdown.Item href="#/action-3" onClick={()=> {
-            return this.setState({ data: scifi })}
-             }>SciFi</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
+      <DropdownButton id="dropdown-basic-button" title={this.state.categorySelected}>
+        {BookCategories.map((category, index) => (
+          <Dropdown.Item 
+            key={`dropdown-item-${index}`}
+            onClick={() => handleDropdownChange(category)}
+          >
+            {category}
+          </Dropdown.Item>
+        ))}
+        
+      </DropdownButton>
+      <FormControl></FormControl>
       
       <Container>
         <Row xs={1} sm={2} md={3} lg={4} xl={5}>
           {this.state.data.map((book) => (
-              <Col className='my-2'>
+              <Col className='my-2' key={book.asin}>
               <Card>
                 <Card.Img className='w-100' variant="top" src={book.img} />
                 <Card.Body>
@@ -62,7 +66,7 @@ class LatestBooks extends React.Component {
                 <Card.Footer>
                   {/* <Button variant="outline-success">Add Card</Button> */}
                   {/* <i className="fas fa-shopping-cart"></i> */}
-                  <FontAwesomeIcon icon={['fas', 'fa', 'shopping', 'cart']}  />
+                  {/* <FontAwesomeIcon icon={['fas', 'fa', 'shopping', 'cart']}  /> */}
                   <Button variant="outline-success">Buy Now</Button>{' '}
                 </Card.Footer>
               </Card>

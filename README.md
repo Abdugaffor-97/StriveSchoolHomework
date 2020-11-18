@@ -19,3 +19,5 @@
 day1 - React Intro
 
 day2 - Creating book store with React
+
+day3 - State // Props (PAIR PROGRAMMING EXERCISE. 1 DRIVER, 1 NAVIGATOR. )
