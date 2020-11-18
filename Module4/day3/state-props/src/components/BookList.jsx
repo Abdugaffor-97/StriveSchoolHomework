@@ -3,7 +3,6 @@ import { Col } from 'react-bootstrap'
 
 
 const BookList = ({ listOfBooks }) => {
-  console.log('listOfBooks', listOfBooks)
   return (
     listOfBooks.map(book => {
       return (
@@ -15,5 +14,4 @@ const BookList = ({ listOfBooks }) => {
 
   )
 }
-
 export default BookList

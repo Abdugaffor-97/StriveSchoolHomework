@@ -19,21 +19,15 @@ const books = {
 }
 
 class LatestBooks extends React.Component {
-
-
   state = {
     data: books.fantasty,
     categorySelected: 'fantasy',
   }
+  // handleDropdownChange = (category) => {
+  //   this.setState({ data: books.category, categorySelected: category })
+  // }
 
-
-  handleDropdownChange = (category) => {
-    this.setState({ data: books.category, categorySelected: category })
-  }
-
-  handleSearchQuery = () => {
-
-  }
+  handleSearchQuery = () => {}
 
   render() {
     return (

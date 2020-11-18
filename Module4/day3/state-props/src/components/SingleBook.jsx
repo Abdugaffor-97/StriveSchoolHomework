@@ -2,15 +2,13 @@
 
 import { Card, Button } from 'react-bootstrap'
 
-const SingleBook = (props) => {
-  console.log(props)
-
+const SingleBook = ({ book }) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={props.img} />
+    <Card style={{ width: '13rem' }}>
+      <Card.Img variant="top" src={book.img} />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text>{props.price}</Card.Text>
+        <Card.Title>{book.title}</Card.Title>
+        <Card.Text>{book.price}</Card.Text>
         <Button variant="primary">Buy Now</Button>
       </Card.Body>
     </Card>
