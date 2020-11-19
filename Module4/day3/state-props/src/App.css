@@ -3,7 +3,11 @@
 }
 
 .App {
-  background-color: #121212;
+  background-color: red;
+}
+
+body {
+  background-color: red !important;
 }
 
 .App nav.navbar {
@@ -11,14 +15,16 @@
 }
 
 .App .card {
-  color: white;
+  color: red !important;
   background-color: #181818;
 }
 
-.App .card h5 {
+.card-body .h5 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: red;
 }
 
 @keyframes App-logo-spin {
