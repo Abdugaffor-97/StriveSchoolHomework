@@ -8,8 +8,8 @@ const SingleBook = ({ book }) => {
       <Card.Img variant="top" src={book.img} />
       <Card.Body>
         <Card.Title>{book.title}</Card.Title>
-        <Card.Text>{book.price}</Card.Text>
-        <Button variant="primary">Buy Now</Button>
+        <Card.Text>$ {book.price}</Card.Text>
+        <Button variant="outline-warning">Buy Now</Button>
       </Card.Body>
     </Card>
   )

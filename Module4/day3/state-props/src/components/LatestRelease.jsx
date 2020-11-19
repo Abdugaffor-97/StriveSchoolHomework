@@ -1,50 +1,40 @@
-import fantasty from "../data/fantasty.json"
+import fantasy from "../data/fantasy.json"
 import history from "../data/history.json"
 import horror from "../data/horror.json"
 import romance from "../data/romance.json"
 import scifi from "../data/scifi.json"
 
 import BookList from './BookList'
+import NavBar from './MyNav'
 
 import React from 'react'
-import { Container, Row, Dropdown, DropdownButton, FormControl } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 
-const BookCategories = ['fantasty', 'history', 'romance', 'scifi', 'horror']
-const books = {
-  fantasty,
-  history,
-  romance,
-  scifi,
-  horror,
-}
+// const BookCategories = ['fantasy', 'history', 'romance', 'scifi', 'horror']
+const books = { fantasy, history, romance, scifi, horror, }
 
 class LatestBooks extends React.Component {
-  state = {
-    data: books.fantasty,
-    categorySelected: 'fantasy',
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: books.fantasy,
+      categorySelected: 'fantasy',
+    }
+    this.handleDropdownChange = this.handleDropdownChange.bind(this)
   }
-  // handleDropdownChange = (category) => {
-  //   this.setState({ data: books.category, categorySelected: category })
-  // }
+  handleDropdownChange = (category) => {
+    this.setState({ data: books[category], categorySelected: category })
+  }
 
-  handleSearchQuery = () => {}
+  handleSearchQuery = () => { }
 
   render() {
     return (
       <>
-        <DropdownButton id="dropdown-basic-button" title={this.state.categorySelected}>
-          {BookCategories.map((category, index) => (
-            <Dropdown.Item
-              key={`dropdown-item-${index}`}
-            // onClick={() => handleDropdownChange(category)}
-            >
-              {category}
-            </Dropdown.Item>
-          ))}
-
-        </DropdownButton>
-        <FormControl></FormControl>
-
+        <br />
+        <br />
+        <br />
+        <NavBar Ddowntitle={this.state.categorySelected} handleDropdownChange={this.handleDropdownChange} />
         <Container>
           <Row xs={1} sm={2} md={3} lg={4} xl={5}>
             <BookList listOfBooks={this.state.data} />
