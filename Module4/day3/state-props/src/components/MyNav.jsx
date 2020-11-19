@@ -14,19 +14,24 @@ class NavBar extends React.Component {
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="basic-addon1"
+            onChange={(e) => this.props.handleSearchQuery(e.target.value)}
+          />
           <DropdownButton className='ml-2' id="dropdown-basic-button" title={this.props.Ddowntitle.toUpperCase()}>
-            {BookCategories.map((cotegory, idx) => {
+            {BookCategories.map((category, idx) => {
               return (
                 <Dropdown.Item href="#/action-1"
                   key={idx}
                   onClick={() => {
-                    if (cotegory !== this.props.Ddowntitle) {
-                      this.props.handleDropdownChange(cotegory)
+                    if (category !== this.props.Ddowntitle) {
+                      this.props.handleDropdownChange(category)
                     }
                   }}
                 >
-                  {cotegory.toUpperCase()}
+                  {category.toUpperCase()}
                 </Dropdown.Item>
               )
             })}
