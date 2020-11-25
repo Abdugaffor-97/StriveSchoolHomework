@@ -19,16 +19,15 @@ class App extends React.Component {
           <Route
             path="/"
             exact
-            // render={(props) => (
-            //   <Home title="Stefano" history={props.history} location={props.location} match={props.match} />
-            // )}
-            render={(
-              props // props are history, location, match
-            ) => <Home title="Stefano" {...props} />} // in this way you can pass your own props along with the router ones
+            render={(props) => <Home title="Stefano" {...props} />}
           />
           <Route path="/menu" exact component={Menu} />
-          <Route path="/reservation" exact component={Reservations} />
-          <Route path="/details/:stefano" component={DishDetails} />
+          <Route
+            path="/reservation"
+            exact
+            render={() => <Reservations header={""} />}
+          />
+          <Route path="/details/:id" component={DishDetails} />
         </Router>
       </>
     );

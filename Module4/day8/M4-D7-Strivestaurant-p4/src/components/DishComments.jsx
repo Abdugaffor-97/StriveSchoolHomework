@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, ListGroup, Alert, Badge } from "react-bootstrap";
 
-class DishComments {
+class DishComments extends React.Component {
   render() {
     return (
       <Container>
