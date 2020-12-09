@@ -8,11 +8,11 @@ class NavBar extends React.Component {
     return (
       <Navbar className='fixed-top' variant="dark" >
         <Container>
-          <Navbar.Brand href="#home">StriveBookStore</Navbar.Brand>
+          <Navbar.Brand>StriveBookStore</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link>Home</Nav.Link>
+            <Nav.Link>Features</Nav.Link>
+            <Nav.Link>Pricing</Nav.Link>
           </Nav>
           <FormControl
             placeholder="Search"

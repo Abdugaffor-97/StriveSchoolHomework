@@ -24,7 +24,7 @@ class SingleBook extends React.Component {
               this.props.onClick()
               this.sendData(this.props.book)
             }}
-          >Comment
+          >Comments
         </Button>
         </Card.Body>
       </Card >
