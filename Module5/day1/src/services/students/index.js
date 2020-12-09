@@ -94,18 +94,20 @@ router.put("/:id", (req, res) => {
   const fileAsString = fileAsBuffer.toString();
   const studentsArray = JSON.parse(fileAsString);
 
-  let newStudent = studentsArray.filter(
-    (student) => student.id == req.params.id
+  const newStudentsArray = studentsArray.filter(
+    (student) => student.id !== req.params.id
   );
 
   const modifiedStudent = req.body;
   modifiedStudent.id = req.params.id;
+  console.log("modifiedStudent", modifiedStudent);
+  newStudentsArray.push(modifiedStudent);
+  fs.writeFileSync(filePath, JSON.stringify(newStudentsArray));
 
-  newStudent = modifiedStudent;
-
-  res.send(newStudent);
+  res.send(modifiedStudent);
 });
 
+// DELETE /students/123 => delete the student with the given id
 router.delete("/:id", (req, res) => {
   const filePath = path.join(__dirname, "students.json");
   const fileAsBuffer = fs.readFileSync(filePath);
@@ -113,12 +115,12 @@ router.delete("/:id", (req, res) => {
   const studentsArray = JSON.parse(fileAsString);
   console.log("req.params.id", req.params.id);
 
-  const newStudents = studentsArray.filter(
-    (student) => student.id != req.params.id
+  const newStudentsArray = studentsArray.filter(
+    (student) => student.id !== req.params.id
   );
-  fs.writeFileSync(filePath, JSON.stringify(newStudents));
+  fs.writeFileSync(filePath, JSON.stringify(newStudentsArray));
 
-  res.status(204).send(newStudents);
+  res.status(204);
 });
 
 module.exports = router;
