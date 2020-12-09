@@ -77,13 +77,17 @@ router.post("/", (req, res) => {
   // Append new student
   const newStudent = req.body;
   console.log("req", req.body);
-  // console.log(newStudent);
-  newStudent.id = uniqid();
-  // console.log(newStudent);
-  studentsArray.push(newStudent);
 
-  fs.writeFileSync(filePath, JSON.stringify(studentsArray));
-  res.status(201).send(newStudent);
+  if (studentsArray.find((student) => student.email === newStudent.email)) {
+    res.send("This email already registerd");
+  } else {
+    newStudent.id = uniqid();
+    // console.log(newStudent);
+    studentsArray.push(newStudent);
+
+    fs.writeFileSync(filePath, JSON.stringify(studentsArray));
+    res.status(201).send(newStudent);
+  }
 });
 
 // 4) PUT /students/123 => edit the student with the given id
