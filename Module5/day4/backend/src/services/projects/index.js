@@ -10,10 +10,10 @@ const upload = multer({});
 
 const router = express.Router();
 
-const studentsFilePath = path.join(__dirname, "students.json");
-const studentsImgFilePath = path.join(
+const projectsFilePath = path.join(__dirname, "projects.json");
+const projectsImgFilePath = path.join(
   __dirname,
-  "../../../public/img/students"
+  "../../../public/img/projects"
 );
 
 router.post("/upload/:id", upload.single("img"), async (req, res, next) => {
@@ -21,12 +21,12 @@ router.post("/upload/:id", upload.single("img"), async (req, res, next) => {
     console.log(req.file);
     await writeFile(
       path.join(
-        studentsImgFilePath,
+        projectsImgFilePath,
         req.params.id + "." + req.file.originalname.split(".")[1]
       ),
       req.file.buffer
     );
-    res.send("Student img uploaded");
+    res.send("Project img uploaded");
   } catch (error) {
     console.log(error);
     next(error);
@@ -35,16 +35,16 @@ router.post("/upload/:id", upload.single("img"), async (req, res, next) => {
 
 router.get("/", async (req, res, next) => {
   try {
-    const studentsDB = await readDB(studentsFilePath);
+    const projectsDB = await readDB(projectsFilePath);
     if (req.query && req.query.name) {
-      const filteredStudents = studentsDB.filter(
-        (student) =>
-          student.hasOwnProperty("name") &&
-          student.name.toLowerCase() === req.query.name.toLowerCase()
+      const filteredStudents = projectsDB.filter(
+        (project) =>
+          project.hasOwnProperty("name") &&
+          project.name.toLowerCase() === req.query.name.toLowerCase()
       );
       res.send(filteredStudents);
     } else {
-      res.send(studentsDB);
+      res.send(projectsDB);
     }
   } catch (error) {
     next(error);
@@ -53,8 +53,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const studentsDB = await readDB(studentsFilePath);
-    const user = studentsDB.filter((user) => user.id === req.params.id);
+    const projectsDB = await readDB(projectsFilePath);
+    const user = projectsDB.filter((user) => user.id === req.params.id);
     if (user.length > 0) {
       res.send(user[0]);
     } else {
@@ -86,18 +86,18 @@ router.post(
         err.httpStatusCode = 400;
         next(err);
       } else {
-        const studentsDB = await readDB(studentsFilePath);
-        const newUser = {
+        const projectsDB = await readDB(projectsFilePath);
+        const newProject = {
           ...req.body,
           id: uniqid(),
           modifiedAt: new Date(),
         };
 
-        studentsDB.push(newUser);
+        projectsDB.push(newProject);
 
-        await writeDB(studentsFilePath, studentsDB);
+        await writeDB(projectsFilePath, projectsDB);
 
-        res.status(201).send({ id: newUser.ID });
+        res.status(201).send({ id: newProject.ID });
       }
     } catch (error) {
       next(error);
@@ -107,9 +107,9 @@ router.post(
 
 router.delete("/:id", async (req, res, next) => {
   try {
-    const studentsDB = await readDB(studentsFilePath);
-    const newDb = studentsDB.filter((student) => student.id !== req.params.id);
-    await writeDB(studentsFilePath, newDb);
+    const projectsDB = await readDB(projectsFilePath);
+    const newDb = projectsDB.filter((student) => student.id !== req.params.id);
+    await writeDB(projectsFilePath, newDb);
 
     res.status(204).send();
   } catch (error) {
@@ -119,8 +119,8 @@ router.delete("/:id", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
-    const studentsDB = await readDB(studentsFilePath);
-    const newDb = studentsDB.filter((student) => student.id !== req.params.id);
+    const projectsDB = await readDB(projectsFilePath);
+    const newDb = projectsDB.filter((student) => student.id !== req.params.id);
 
     const modifiedStudent = {
       ...req.body,
@@ -129,7 +129,7 @@ router.put("/:id", async (req, res, next) => {
     };
 
     newDb.push(modifiedStudent);
-    await writeDB(studentsFilePath, newDb);
+    await writeDB(projectsFilePath, newDb);
 
     res.send({ id: modifiedStudent.id });
   } catch (error) {

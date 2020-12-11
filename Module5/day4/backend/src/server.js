@@ -2,8 +2,8 @@ const express = require("express");
 const listEndPoints = require("express-list-endpoints");
 const { join } = require("path");
 const cors = require("cors");
-const filesRouters = require("./services/files");
 const studentsRouters = require("./services/students");
+const projectsRouters = require("./services/projects");
 
 const {
   notFoundHandler,
@@ -19,8 +19,8 @@ publicFolderPath = join(__dirname, "../public");
 
 app.use(cors());
 app.use(express.json());
-app.use("/files", filesRouters);
 app.use("/students", studentsRouters);
+app.use("/projects", projectsRouters);
 
 app.use(notFoundHandler);
 app.use(unauthorizedHandler);
